@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista de Árbol - Arquitectura del Sitio</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa; /* Fondo claro */
+            overflow: hidden; /* Evita barras de scroll */
+        }
+        .main-header {
+            background-color: #e9ecef;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #dee2e6;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 20;
+        }
+        .main-header h1 {
+            margin: 0;
+            font-size: 18px;
+            color: #343a40;
+        }
+        .main-header nav a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .main-header nav a.active {
+            background-color: #007bff;
+            color: #fff;
+        }
+        svg {
+            display: block;
+        }
+        .link {
+            fill: none;
+            stroke: #6c757d; /* Color de línea más suave */
+            stroke-width: 1.5px;
+        }
+        .node {
+            cursor: pointer;
+            font: 11px sans-serif;
+        }
+        .node circle {
+            stroke-width: 2px;
+        }
+        .node text {
+            fill: #343a40; /* Texto oscuro para buen contraste */
+        }
+        #controls {
+            position: absolute;
+            top: 70px; /* Ajustado para el header */
+            left: 20px;
+            z-index: 10;
+        }
+        #controls button {
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+        .tooltip {
+            position: absolute;
+            text-align: left;
+            padding: 8px;
+            font: 12px sans-serif;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            transition: opacity 0.2s;
+            max-width: 400px;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1>Arquitectura del Sitio (Filtrado)</h1>
+        <nav>
+            <a href="grahp.html" class="active">Vista de Árbol</a>
+            <a href="icicle.html">Vista de Jerarquía</a>
+            <a href="pack.html">Vista de Concentración</a>
+        </nav>
+    </header>
+    <div id="controls">
+        <button id="collapse-btn">Colapsar Todo</button>
+        <button id="expand-btn">Expandir Todo</button>
+    </div>    <div id="chart"></div>
+    <div class="tooltip"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        // --- Configuración del Gráfico ---
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+        const margin = { top: 40, right: 150, bottom: 40, left: 150 };
+        const dx = 20;
+        const dy = (width - margin.right - margin.left) / 6;
+
+        const tree = d3.tree().nodeSize([dx, dy]);
+        const color = d3.scaleOrdinal(d3.schemeTableau10); // Paleta de colores mejorada
+
+        // --- Creación del Gráfico ---
+        d3.json("data/hierarchy.json").then(data => {
+
+            const svg = d3.select("#chart").append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .attr("viewBox", [-margin.left, -margin.top, width, height])
+                .style("user-select", "none")
+                .call(d3.zoom().on("zoom", (event) => {
+                    g.attr("transform", event.transform);
+                }));
+
+            const g = svg.append("g")
+                .attr("transform", `translate(${dy / 2}, ${height / 2})`);
+
+            const gLink = g.append("g")
+                .attr("fill", "none")
+                .attr("stroke", "#6c757d")
+                .attr("stroke-opacity", 0.4)
+                .attr("stroke-width", 1.5);
+
+            const gNode = g.append("g")
+                .attr("cursor", "pointer")
+                .attr("pointer-events", "all");
+            
+            const tooltip = d3.select(".tooltip");
+
+            const root = d3.hierarchy(data);
+            root.x0 = 0;
+            root.y0 = 0;
+
+            // Construir la URL completa para cada nodo
+            root.each(node => {
+                node.data.fullUrl = (node.parent ? node.parent.data.fullUrl + '/' : '') + node.data.name;
+            });
+
+            root.descendants().forEach((d, i) => {
+                d.id = i;
+                d._children = d.children;
+                // Colapsar nodos profundos por defecto
+                if (d.depth > 2) d.children = null;
+            });
+
+            // --- Controles ---
+            d3.select("#collapse-btn").on("click", () => {
+                root.descendants().forEach(d => {
+                    if (d.depth > 0) { // No colapsar la raíz misma
+                        d.children = null;
+                    }
+                });
+                update(root);
+            });
+
+            d3.select("#expand-btn").on("click", () => {
+                root.descendants().forEach(d => {
+                    d.children = d._children;
+                });
+                update(root);
+            });
+
+            function update(source) {
+                const duration = 250;
+                const nodes = root.descendants().reverse();
+                const links = root.links();
+
+                // Compute the new tree layout.
+                tree(root);
+
+                const transition = g.transition().duration(duration);
+
+                // Update the nodes…
+                const node = gNode.selectAll("g")
+                    .data(nodes, d => d.id);
+
+                // Enter any new nodes at the parent's previous position.
+                const nodeEnter = node.enter().append("g")
+                    .attr("class", "node")
+                    .attr("transform", d => `translate(${source.y0},${source.x0})`)
+                    .attr("fill-opacity", 0)
+                    .attr("stroke-opacity", 0)
+                    .on("click", (event, d) => {
+                        d.children = d.children ? null : d._children;
+                        update(d);
+                    })
+                    .on("mouseover", (event, d) => {
+                        tooltip.transition().duration(200).style("opacity", .9);
+                        tooltip.html(`<a href="https://${d.data.fullUrl}" target="_blank" rel="noopener noreferrer">${d.data.fullUrl}</a>`)
+                            .style("left", (event.pageX + 15) + "px")
+                            .style("top", (event.pageY - 28) + "px");
+                    })
+                    .on("mouseout", () => {
+                        tooltip.transition().style("opacity", 0);
+                    });
+
+                nodeEnter.append("circle")
+                    .attr("r", 5)
+                    .attr("stroke", d => color(d.depth))
+                    .attr("fill", d => d._children ? "#fff" : color(d.depth)); // Relleno si es hoja
+
+                nodeEnter.append("text")
+                    .attr("dy", "0.31em")
+                    .attr("x", d => d._children ? -10 : 10)
+                    .attr("text-anchor", d => d._children ? "end" : "start")
+                    .text(d => d.data.name)
+                    .clone(true).lower()
+                    .attr("stroke-linejoin", "round")
+                    .attr("stroke-width", 3)
+                    .attr("stroke", "#f8f9fa"); // Halo del color del fondo
+
+                // Transition nodes to their new position.
+                node.merge(nodeEnter).transition(transition)
+                    .attr("transform", d => `translate(${d.y},${d.x})`)
+                    .attr("fill-opacity", 1)
+                    .attr("stroke-opacity", 1);
+
+                // Transition exiting nodes to the parent's new position.
+                node.exit().transition(transition).remove()
+                    .attr("transform", d => `translate(${source.y},${source.x})`)
+                    .attr("fill-opacity", 0)
+                    .attr("stroke-opacity", 0);
+
+                // Update the links…
+                const link = gLink.selectAll("path")
+                    .data(links, d => d.target.id);
+
+                // Enter any new links at the parent's previous position.
+                const linkEnter = link.enter().append("path")
+                    .attr("class", "link")
+                    .attr("d", d => {
+                        const o = { x: source.x0, y: source.y0 };
+                        return d3.linkHorizontal()({ source: o, target: o });
+                    });
+
+                // Transition links to their new position.
+                link.merge(linkEnter).transition(transition)
+                    .attr("d", d3.linkHorizontal().x(d => d.y).y(d => d.x));
+
+                // Transition exiting nodes to the parent's new position.
+                link.exit().transition(transition).remove()
+                    .attr("d", d => {
+                        const o = { x: source.x, y: source.y };
+                        return d3.linkHorizontal()({ source: o, target: o });
+                    });
+
+                // Stash the old positions for transition.
+                root.eachBefore(d => {
+                    d.x0 = d.x;
+                    d.y0 = d.y;
+                });
+            }
+
+            update(root);
+
+        }).catch(error => {
+            console.error("Error al cargar o procesar los datos:", error);
+            document.body.innerHTML = `<h1>Error al cargar los datos</h1><p>Asegúrate de que el archivo <code>data/hierarchy.json</code> existe, no está vacío y tiene un formato JSON válido.</p><pre>${error}</pre>`;
+        });
+    </script>
+</body>
+</html>

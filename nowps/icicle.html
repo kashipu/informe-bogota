@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista de Jerarquía - Arquitectura del Sitio</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+            overflow: hidden;
+        }
+        .main-header {
+            background-color: #e9ecef;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #dee2e6;
+            z-index: 20;
+        }
+        .main-header h1 { margin: 0; font-size: 18px; color: #343a40; }
+        .main-header nav a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .main-header nav a.active { background-color: #007bff; color: #fff; }
+        .chart-container {
+            width: 100vw;
+            height: calc(100vh - 55px); /* Altura restante */
+        }
+        svg { display: block; width: 100%; height: 100%; }
+        rect { cursor: pointer; }
+        text {
+            font: 10px sans-serif;
+            pointer-events: none;
+            fill: #fff;
+            text-shadow: 0 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 -1px 0 #000;
+        }
+        .tooltip {
+            position: absolute;
+            padding: 8px;
+            font: 12px sans-serif;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1>Arquitectura del Sitio (Filtrado)</h1>
+        <nav>
+            <a href="grahp.html">Vista de Árbol</a>
+            <a href="icicle.html" class="active">Vista de Jerarquía</a>
+            <a href="pack.html">Vista de Concentración</a>
+        </nav>
+    </header>
+    <div class="chart-container" id="icicle-chart"></div>
+    <div class="tooltip"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        const container = document.getElementById('icicle-chart');
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        const color = d3.scaleOrdinal(d3.schemeTableau10);
+        const tooltip = d3.select(".tooltip");
+
+        d3.json("data/hierarchy.json").then(data => {
+            createIcicleChart(data);
+        }).catch(error => {
+            console.error("Error al cargar hierarchy.json:", error);
+            container.innerHTML = `<h1>Error al cargar los datos</h1><p>Asegúrate de que el archivo <code>data/hierarchy.json</code> existe y no está vacío.</p><pre>${error}</pre>`;
+        });
+
+        function createIcicleChart(data) {
+            function partition(data) {
+                const root = d3.hierarchy(data)
+                    .sum(d => d.value)
+                    .sort((a, b) => b.height - a.height || b.value - a.value);
+                return d3.partition()
+                    .size([height, (root.height + 1) * width / 3])
+                    (root);
+            }
+
+            const root = partition(data);
+            let focus = root;
+
+            const svg = d3.select("#icicle-chart").append("svg")
+                .attr("viewBox", [0, 0, width, height])
+                .style("font", "10px sans-serif");
+
+            const cell = svg
+                .selectAll("g")
+                .data(root.descendants())
+                .join("g")
+                .attr("transform", d => `translate(${d.y0},${d.x0})`);
+
+            const rect = cell.append("rect")
+                .attr("width", d => d.y1 - d.y0 - 1)
+                .attr("height", d => d.x1 - d.x0 - 1)
+                .attr("fill-opacity", 0.8)
+                .attr("fill", d => {
+                    if (!d.depth) return "#ccc";
+                    while (d.depth > 1) d = d.parent;
+                    return color(d.data.name);
+                })
+                .on("click", (event, p) => clicked(p));
+
+            const text = cell.append("text")
+                .attr("x", 4)
+                .attr("y", 13)
+                .attr("fill-opacity", d => +labelVisible(d));
+
+            text.append("tspan")
+                .text(d => d.data.name);
+
+            cell.on("mouseover", (event, d) => {
+                tooltip.transition().style("opacity", .9);
+                tooltip.html(`<strong>${d.data.name}</strong><br/>Páginas: ${d.value || 0}`)
+                    .style("left", (event.pageX + 10) + "px")
+                    .style("top", (event.pageY - 28) + "px");
+            }).on("mouseout", () => {
+                tooltip.transition().style("opacity", 0);
+            });
+
+            function clicked(p) {
+                focus = focus === p ? p = p.parent : p;
+
+                root.each(d => d.target = {
+                    x0: (d.x0 - p.x0) / (p.x1 - p.x0) * height,
+                    x1: (d.x1 - p.x0) / (p.x1 - p.x0) * height,
+                    y0: d.y0 - p.y0,
+                    y1: d.y1 - p.y0
+                });
+
+                const t = cell.transition().duration(750)
+                    .attr("transform", d => `translate(${d.target.y0},${d.target.x0})`);
+
+                rect.transition(t).attr("height", d => d.target.x1 - d.target.x0 - 1);
+                text.transition(t).attr("fill-opacity", d => +labelVisible(d.target));
+            }
+
+            function labelVisible(d) {
+                return d.y1 - d.y0 > 16;
+            }
+        }
+    </script>
+</body>
+</html>

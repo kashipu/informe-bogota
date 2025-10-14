@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vista de Concentración - Arquitectura del Sitio</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            background-color: #f8f9fa;
+            color: #343a40;
+            overflow: hidden;
+        }
+        .main-header {
+            background-color: #e9ecef;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #dee2e6;
+            z-index: 20;
+        }
+        .main-header h1 { margin: 0; font-size: 18px; color: #343a40; }
+        .main-header nav a {
+            margin-left: 15px;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 14px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+        .main-header nav a.active { background-color: #007bff; color: #fff; }
+        .chart-container {
+            width: 100vw;
+            height: calc(100vh - 55px);
+        }
+        svg { display: block; width: 100%; height: 100%; cursor: pointer; }
+        .node:hover { stroke: #000; stroke-width: 1.5px; }
+        .node text { pointer-events: none; }
+        .tooltip {
+            position: absolute;
+            padding: 8px;
+            font: 12px sans-serif;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1>Arquitectura del Sitio</h1>
+        <nav>
+            <a href="index.html">🏠 Inicio</a>
+            <a href="grahp.html">Vista de Árbol</a>
+            <a href="icicle.html">Vista de Jerarquía</a>
+            <a href="pack.html" class="active">Vista de Concentración</a>
+        </nav>
+    </header>
+    <div class="chart-container" id="pack-chart"></div>
+    <div class="tooltip"></div>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script>
+        const container = document.getElementById('pack-chart');
+        const width = container.clientWidth;
+        const height = container.clientHeight;
+        const color = d3.scaleLinear().domain([0, 5]).range(["hsl(152,80%,80%)", "hsl(228,30%,40%)"]).interpolate(d3.interpolateHcl);
+        const tooltip = d3.select(".tooltip");
+
+        d3.json("data/hierarchy.json").then(data => {
+            createPackChart(data);
+        }).catch(error => {
+            console.error("Error al cargar hierarchy.json:", error);
+            container.innerHTML = `<h1>Error al cargar los datos</h1><p>Asegúrate de que el archivo <code>data/hierarchy.json</code> existe y no está vacío.</p><pre>${error}</pre>`;
+        });
+
+        function createPackChart(data) {
+            const pack = data => d3.pack()
+                .size([width, height])
+                .padding(3)
+                (d3.hierarchy(data)
+                    .sum(d => d.value)
+                    .sort((a, b) => b.value - a.value));
+
+            const root = pack(data);
+            let focus = root;
+            let view;
+
+            const svg = d3.select("#pack-chart").append("svg")
+                .attr("viewBox", `-${width / 2} -${height / 2} ${width} ${height}`)
+                .on("click", (event) => zoom(event, root));
+
+            const node = svg.append("g")
+                .selectAll("circle")
+                .data(root.descendants().slice(1))
+                .join("circle")
+                .attr("class", "node")
+                .attr("fill", d => d.children ? color(d.depth) : "#ddd")
+                .attr("pointer-events", d => !d.children ? "none" : null)
+                .on("mouseover", function(event, d) {
+                    d3.select(this).attr("stroke", "#000");
+                    tooltip.transition().style("opacity", .9);
+                    tooltip.html(`<strong>${d.data.name}</strong><br/>Páginas: ${d.value}`)
+                       .style("left", (event.pageX + 10) + "px")
+                       .style("top", (event.pageY - 28) + "px");
+                })
+                .on("mouseout", function() {
+                    d3.select(this).attr("stroke", null);
+                    tooltip.transition().style("opacity", 0);
+                })
+                .on("click", (event, d) => focus !== d && (zoom(event, d), event.stopPropagation()));
+
+            const label = svg.append("g")
+                .style("font", "12px sans-serif")
+                .attr("pointer-events", "none")
+                .attr("text-anchor", "middle")
+                .selectAll("text")
+                .data(root.descendants())
+                .join("text")
+                .style("fill-opacity", d => d.parent === root ? 1 : 0)
+                .style("display", d => d.parent === root ? "inline" : "none")
+                .text(d => d.data.name);
+
+            zoomTo([root.x, root.y, root.r * 2]);
+
+            function zoomTo(v) {
+                const k = Math.min(width, height) / v[2]; // Usar la dimensión más pequeña para evitar cortes
+                view = v;
+                label.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
+                node.attr("transform", d => `translate(${(d.x - v[0]) * k},${(d.y - v[1]) * k})`);
+                node.attr("r", d => d.r * k);
+            }
+
+            function zoom(event, d) {
+                focus = d;
+                const transition = svg.transition().duration(750)
+                    .tween("zoom", () => {
+                        const i = d3.interpolateZoom(view, [focus.x, focus.y, focus.r * 2]);
+                        return t => zoomTo(i(t));
+                    });
+
+                label
+                    .filter(d => d.parent === focus || this.style.display === "inline")
+                    .transition(transition)
+                    .style("fill-opacity", d => d.parent === focus ? 1 : 0)
+                    .on("start", function(d) { if (d.parent === focus) this.style.display = "inline"; })
+                    .on("end", function(d) { if (d.parent !== focus) this.style.display = "none"; });
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,2386 @@
+{
+  "name": "www.bancodebogota.com",
+  "children": [
+    {
+      "name": "BuscadordePuntosBogota",
+      "value": 2
+    },
+    {
+      "name": "BuscadordePuntosbogota",
+      "value": 1
+    },
+    {
+      "name": "alianzas",
+      "children": [
+        {
+          "name": "crediconvenio",
+          "value": 1
+        },
+        {
+          "name": "mercado-libre",
+          "value": 1
+        },
+        {
+          "name": "tarjeta-de-credito",
+          "children": [
+            {
+              "name": "claro",
+              "value": 1
+            },
+            {
+              "name": "comprar-apple-sin-intereses",
+              "value": 1
+            },
+            {
+              "name": "decathlon",
+              "value": 1
+            },
+            {
+              "name": "mercado-libre",
+              "value": 1
+            },
+            {
+              "name": "movistar-alianza",
+              "value": 1
+            },
+            {
+              "name": "tigo",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "atenci%C3%B3n-al-cliente",
+      "children": [
+        {
+          "name": "preguntas-frecuentes",
+          "children": [
+            {
+              "name": "medios-de-pago",
+              "children": [
+                {
+                  "name": "datafono-fisico",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "atencion-al-cliente",
+      "children": [
+        {
+          "name": "canales",
+          "children": [
+            {
+              "name": "canales-de-atencion-presencial",
+              "children": [
+                {
+                  "name": "corresponsales-bancarios",
+                  "children": [
+                    {
+                      "name": "como-ser-corresponsal",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "oficinas",
+                  "children": [
+                    {
+                      "name": "centro-atencion-libranza",
+                      "value": 1
+                    },
+                    {
+                      "name": "centro-atencion-libranza-especiales",
+                      "value": 1
+                    },
+                    {
+                      "name": "centros-especializados-vivienda",
+                      "value": 1
+                    },
+                    {
+                      "name": "oficina-incluyente",
+                      "value": 1
+                    },
+                    {
+                      "name": "oficina-insignia",
+                      "value": 1
+                    },
+                    {
+                      "name": "oficina-joven",
+                      "value": 1
+                    },
+                    {
+                      "name": "oficina-premium",
+                      "value": 1
+                    },
+                    {
+                      "name": "oficina-tradicional",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "canales-digitales",
+              "children": [
+                {
+                  "name": "avalpay-center",
+                  "value": 1
+                },
+                {
+                  "name": "banca-movil",
+                  "value": 1
+                },
+                {
+                  "name": "banca-virtual",
+                  "value": 1
+                },
+                {
+                  "name": "token",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "canales-electronicos",
+              "children": [
+                {
+                  "name": "cajeros",
+                  "value": 1
+                },
+                {
+                  "name": "multifuncional",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "disponibilidad-de-canales",
+              "value": 1
+            },
+            {
+              "name": "transacciones",
+              "children": [
+                {
+                  "name": "apple-pay",
+                  "value": 1
+                },
+                {
+                  "name": "bloqueos",
+                  "value": 1
+                },
+                {
+                  "name": "compras",
+                  "value": 1
+                },
+                {
+                  "name": "consultas",
+                  "value": 1
+                },
+                {
+                  "name": "extractos-certificados",
+                  "value": 1
+                },
+                {
+                  "name": "inscripciones-cuentas-servicios",
+                  "value": 1
+                },
+                {
+                  "name": "pagos",
+                  "value": 1
+                },
+                {
+                  "name": "programacion-de-pagos",
+                  "value": 1
+                },
+                {
+                  "name": "transferencias-utilizaciones",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "canales-electronicos",
+          "children": [
+            {
+              "name": "canales",
+              "children": [
+                {
+                  "name": "cajeros",
+                  "value": 1
+                },
+                {
+                  "name": "multifuncional",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "transacciones",
+              "children": [
+                {
+                  "name": "pagos",
+                  "value": 1
+                },
+                {
+                  "name": "transferencias-utilizaciones",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "defensor-del-consumidor",
+          "value": 1
+        },
+        {
+          "name": "impuestos",
+          "children": [
+            {
+              "name": "beneficios",
+              "value": 1
+            },
+            {
+              "name": "calendario",
+              "value": 1
+            },
+            {
+              "name": "canales-de-pago",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "pqrs",
+          "value": 1
+        },
+        {
+          "name": "preguntas-frecuentes",
+          "children": [
+            {
+              "name": "adelanto-de-nomina",
+              "value": 1
+            },
+            {
+              "name": "banca-movil",
+              "value": 1
+            },
+            {
+              "name": "banco-de-bogota",
+              "value": 1
+            },
+            {
+              "name": "cdt",
+              "value": 1
+            },
+            {
+              "name": "crediestudiantil",
+              "value": 1
+            },
+            {
+              "name": "crediservice",
+              "value": 1
+            },
+            {
+              "name": "credito-de-vehiculo",
+              "value": 1
+            },
+            {
+              "name": "cuatro-por-mil",
+              "value": 1
+            },
+            {
+              "name": "cuenta-corriente",
+              "value": 1
+            },
+            {
+              "name": "cuenta-de-ahorros",
+              "value": 1
+            },
+            {
+              "name": "cupoagil-banco-de-bogota",
+              "value": 1
+            },
+            {
+              "name": "habeas-data",
+              "value": 1
+            },
+            {
+              "name": "instacupo",
+              "value": 1
+            },
+            {
+              "name": "libranza",
+              "value": 1
+            },
+            {
+              "name": "libre-inversion",
+              "value": 1
+            },
+            {
+              "name": "medios-de-pago",
+              "children": [
+                {
+                  "name": "codigo-qr-para-ti",
+                  "value": 1
+                },
+                {
+                  "name": "dale-para-ti",
+                  "value": 1
+                },
+                {
+                  "name": "dale-para-tu-negocio",
+                  "value": 1
+                },
+                {
+                  "name": "datafono-digital",
+                  "value": 1
+                },
+                {
+                  "name": "link-de-pagos",
+                  "value": 1
+                },
+                {
+                  "name": "micrositio-abierto",
+                  "value": 1
+                },
+                {
+                  "name": "micrositio-cerrado",
+                  "value": 1
+                },
+                {
+                  "name": "pagos-con-tarjeta",
+                  "value": 1
+                },
+                {
+                  "name": "transversal-pasarela-gou",
+                  "value": 1
+                },
+                {
+                  "name": "webcheckout",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "portafolio-de-vivienda",
+              "value": 1
+            },
+            {
+              "name": "portal-negocios",
+              "value": 1
+            },
+            {
+              "name": "portales-transaccionales",
+              "value": 1
+            },
+            {
+              "name": "tag-aval",
+              "value": 1
+            },
+            {
+              "name": "tarjetas-credito",
+              "value": 1
+            },
+            {
+              "name": "tarjetas-debito",
+              "value": 1
+            },
+            {
+              "name": "token",
+              "value": 1
+            },
+            {
+              "name": "transfiya",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "proteccion-al-consumidor",
+          "children": [
+            {
+              "name": "decreto-587",
+              "value": 1
+            },
+            {
+              "name": "defensor-del-consumidor",
+              "value": 1
+            },
+            {
+              "name": "ley-de-proteccion",
+              "value": 1
+            },
+            {
+              "name": "proteccion-datos-personales",
+              "value": 1
+            },
+            {
+              "name": "relacion-con-el-cliente",
+              "value": 1
+            },
+            {
+              "name": "superintendencia-financiera",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "seguridad-bancaria",
+          "children": [
+            {
+              "name": "seguridad-cheques-consignaciones",
+              "children": [
+                {
+                  "name": "falsificacion-o-adulteracion",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "seguridad-comunicaciones-digitales",
+              "value": 1
+            },
+            {
+              "name": "seguridad-en-cajeros",
+              "children": [
+                {
+                  "name": "perdida-confidencialidad",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "seguridad-en-internet",
+              "value": 1
+            },
+            {
+              "name": "seguridad-en-oficinas",
+              "children": [
+                {
+                  "name": "fleteo",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "seguridad-en-portales-empresariales",
+              "value": 1
+            },
+            {
+              "name": "seguridad-en-tu-celular",
+              "children": [
+                {
+                  "name": "aplicacion-movil",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "servilineas",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "atención-al-cliente",
+      "children": [
+        {
+          "name": "preguntas-frecuentes",
+          "children": [
+            {
+              "name": "medios-de-pago",
+              "children": [
+                {
+                  "name": "datafono-fisico",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "banca-empresas",
+      "children": [
+        {
+          "name": "empresarial",
+          "value": 1
+        },
+        {
+          "name": "institucional",
+          "value": 1
+        },
+        {
+          "name": "microempresas",
+          "children": [
+            {
+              "name": "cartera-ordinaria-pesos",
+              "value": 1
+            },
+            {
+              "name": "portafolio-integral-crecer",
+              "value": 1
+            },
+            {
+              "name": "portafolio-integral-logros",
+              "value": 1
+            },
+            {
+              "name": "sustitucion-pasivos",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "oficial",
+          "value": 1
+        },
+        {
+          "name": "pyme",
+          "children": [
+            {
+              "name": "portafolio-integral-pyme",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "social",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "banca-personas",
+      "children": [
+        {
+          "name": "infantil",
+          "value": 1
+        },
+        {
+          "name": "joven",
+          "children": [
+            {
+              "name": "portafolio-integral-joven",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "pensionados",
+          "value": 1
+        },
+        {
+          "name": "portafolio-integral-basico",
+          "value": 1
+        },
+        {
+          "name": "portafolio-personas",
+          "value": 1
+        },
+        {
+          "name": "portafolio-personas-alto",
+          "value": 1
+        },
+        {
+          "name": "preferente",
+          "children": [
+            {
+              "name": "portafolio-integral-preferente",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "premium",
+          "children": [
+            {
+              "name": "portafolio-integral-premium",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bancas",
+      "children": [
+        {
+          "name": "empresas",
+          "children": [
+            {
+              "name": "banca-pyme",
+              "children": [
+                {
+                  "name": "portafolio-integral-pyme",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "premium",
+          "children": [
+            {
+              "name": "portafolio-integral-premium",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "bre-b",
+      "children": [
+        {
+          "name": "llaves",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "buscador-puntos-de-atencion",
+      "value": 1
+    },
+    {
+      "name": "cercademi",
+      "children": [
+        {
+          "name": "colombia",
+          "children": [
+            {
+              "name": "results-bogota",
+              "children": [
+                {
+                  "name": "Ver%20Todas",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "consulta-tasas-y-tarifas",
+      "value": 1
+    },
+    {
+      "name": "cuenta-de-ahorros",
+      "value": 1
+    },
+    {
+      "name": "educacion-financiera",
+      "children": [
+        {
+          "name": "como-funciona-una-tarjeta-de-credito",
+          "value": 1
+        },
+        {
+          "name": "creditos",
+          "children": [
+            {
+              "name": "antes-de-pedir-un-credito",
+              "value": 1
+            },
+            {
+              "name": "beneficios-de-tener-una-buena-vida-crediticia",
+              "value": 1
+            },
+            {
+              "name": "tipos-de-tasas-de-interes",
+              "value": 1
+            },
+            {
+              "name": "todo-sobre-los-tipos-de-credito",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "economia-familiar",
+          "children": [
+            {
+              "name": "capacidad-de-endeudamiento",
+              "value": 1
+            },
+            {
+              "name": "como-hacer-un-presupuesto",
+              "value": 1
+            },
+            {
+              "name": "como-hacer-un-presupuesto-personal",
+              "value": 1
+            },
+            {
+              "name": "cuanto-vale-estudiar",
+              "value": 1
+            },
+            {
+              "name": "que-es-un-seguro-y-cuales-son-los-tipos",
+              "value": 1
+            },
+            {
+              "name": "que-es-y-como-aumentar-el-patrimonio",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "inversion",
+          "children": [
+            {
+              "name": "invertir-en-titulos-valores",
+              "value": 1
+            },
+            {
+              "name": "riesgos-financieros",
+              "value": 1
+            },
+            {
+              "name": "tipos-de-inversion",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "nuestra-organizacion",
+          "children": [
+            {
+              "name": "como-funciona-la-economia",
+              "value": 1
+            },
+            {
+              "name": "como-se-origino-el-dinero",
+              "value": 1
+            },
+            {
+              "name": "deberes-y-derechos-del-consumidor-financiero",
+              "value": 1
+            },
+            {
+              "name": "defensor-del-consumidor",
+              "value": 1
+            },
+            {
+              "name": "historia-del-dinero",
+              "value": 1
+            },
+            {
+              "name": "ley-de-habeas-data",
+              "value": 1
+            },
+            {
+              "name": "nuestra-historia",
+              "value": 1
+            },
+            {
+              "name": "que-es-un-banco",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "tarjeta-de-credito",
+          "children": [
+            {
+              "name": "como-funcionan-las-tarjetas-de-credito",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "tarjetas-de-credito",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "empresas",
+      "children": [
+        {
+          "name": "bre-b",
+          "value": 1
+        },
+        {
+          "name": "comercio-internacional-y-tesoreria",
+          "children": [
+            {
+              "name": "comercio-internacional",
+              "children": [
+                {
+                  "name": "avales-y-garantias",
+                  "value": 1
+                },
+                {
+                  "name": "capital-de-trabajo",
+                  "value": 1
+                },
+                {
+                  "name": "cartas-de-credito-exportacion",
+                  "value": 1
+                },
+                {
+                  "name": "cartas-de-credito-importacion",
+                  "value": 1
+                },
+                {
+                  "name": "cobranzas-de-exportacion",
+                  "value": 1
+                },
+                {
+                  "name": "cobranzas-de-importacion",
+                  "value": 1
+                },
+                {
+                  "name": "confirming",
+                  "value": 1
+                },
+                {
+                  "name": "giros-directos",
+                  "value": 1
+                },
+                {
+                  "name": "giros-financiados",
+                  "value": 1
+                },
+                {
+                  "name": "ordenes-de-pago",
+                  "value": 1
+                },
+                {
+                  "name": "portal-de-internet",
+                  "value": 1
+                },
+                {
+                  "name": "prefinanciacion-exportaciones",
+                  "value": 1
+                },
+                {
+                  "name": "reintegros",
+                  "value": 1
+                },
+                {
+                  "name": "servicios-digitales-moneda-extranjera",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "negociacion-de-valores",
+              "value": 1
+            },
+            {
+              "name": "negocio-de-divisas",
+              "value": 1
+            },
+            {
+              "name": "negocios-de-divisas",
+              "children": [
+                {
+                  "name": "compra-de-dolares-y-otras-divisas",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "operaciones-de-cobertura",
+              "children": [
+                {
+                  "name": "estructuracion-con-multiples",
+                  "value": 1
+                },
+                {
+                  "name": "estructuracion-de-estrategias",
+                  "value": 1
+                },
+                {
+                  "name": "forward-sobre-divisas",
+                  "value": 1
+                },
+                {
+                  "name": "opciones-tipo-de-cambio",
+                  "value": 1
+                },
+                {
+                  "name": "swap-tasas-de-interes",
+                  "value": 1
+                },
+                {
+                  "name": "swap-tipo-de-cambio",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "productos-y-servicios-en-el-exterior",
+              "children": [
+                {
+                  "name": "miami",
+                  "value": 1
+                },
+                {
+                  "name": "new-york",
+                  "value": 1
+                },
+                {
+                  "name": "panama",
+                  "value": 1
+                },
+                {
+                  "name": "sucursal-panama",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "inversion-y-liquidez",
+          "children": [
+            {
+              "name": "cdt",
+              "children": [
+                {
+                  "name": "confianza",
+                  "value": 1
+                },
+                {
+                  "name": "especial",
+                  "value": 1
+                },
+                {
+                  "name": "tradicional",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "cuenta-corriente",
+              "children": [
+                {
+                  "name": "grandes-empresas",
+                  "value": 1
+                },
+                {
+                  "name": "pequenas-empresas",
+                  "value": 1
+                },
+                {
+                  "name": "traslado-electronico-de-saldos-tes",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "cuenta-de-ahorro-superdia",
+              "value": 1
+            },
+            {
+              "name": "fiducias",
+              "children": [
+                {
+                  "name": "administracion",
+                  "children": [
+                    {
+                      "name": "anticipos",
+                      "value": 1
+                    },
+                    {
+                      "name": "custodia",
+                      "value": 1
+                    },
+                    {
+                      "name": "fuente-de-pago",
+                      "value": 1
+                    },
+                    {
+                      "name": "garantia",
+                      "value": 1
+                    },
+                    {
+                      "name": "pagos",
+                      "value": 1
+                    },
+                    {
+                      "name": "retencion-en-garantia",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "inmobiliaria",
+                  "children": [
+                    {
+                      "name": "contrato-de-preventas",
+                      "value": 1
+                    },
+                    {
+                      "name": "mercantil",
+                      "value": 1
+                    },
+                    {
+                      "name": "mercantil-de-administracion",
+                      "value": 1
+                    },
+                    {
+                      "name": "proyectos-de-construccion-clientes-del-sector",
+                      "value": 1
+                    }
+                  ]
+                },
+                {
+                  "name": "inversion",
+                  "children": [
+                    {
+                      "name": "fondo-bursatil",
+                      "value": 1
+                    },
+                    {
+                      "name": "fondos-de-inversion-colectiva",
+                      "value": 1
+                    },
+                    {
+                      "name": "portafolio-individual-de-inversion",
+                      "value": 1
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "remesas-negociadas",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "leasing",
+          "children": [
+            {
+              "name": "importacion",
+              "value": 1
+            },
+            {
+              "name": "leaseback",
+              "value": 1
+            },
+            {
+              "name": "leasing-de-importacion",
+              "value": 1
+            },
+            {
+              "name": "leasing-inmobiliario",
+              "value": 1
+            },
+            {
+              "name": "leasing-vehiculos",
+              "value": 1
+            },
+            {
+              "name": "maquinaria-equipo",
+              "value": 1
+            },
+            {
+              "name": "recarga-leasing",
+              "value": 1
+            },
+            {
+              "name": "sostenibilidad",
+              "value": 1
+            },
+            {
+              "name": "vehiculos",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "productos-de-credito",
+          "children": [
+            {
+              "name": "capital-de-trabajo",
+              "children": [
+                {
+                  "name": "creditos-cartera-ordinaria",
+                  "value": 1
+                },
+                {
+                  "name": "creditos-tesoreria-y-liquidez",
+                  "value": 1
+                },
+                {
+                  "name": "cupo-rotativo-para-pago",
+                  "value": 1
+                },
+                {
+                  "name": "cupo-rotativo-para-pagos",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "contingencias",
+              "children": [
+                {
+                  "name": "aceptaciones-bancarias",
+                  "value": 1
+                },
+                {
+                  "name": "aval-bancario",
+                  "value": 1
+                },
+                {
+                  "name": "descuento-de-bono-de-prenda",
+                  "value": 1
+                },
+                {
+                  "name": "garantia-bancaria",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "credito-constructor",
+              "value": 1
+            },
+            {
+              "name": "credito-rotativo",
+              "children": [
+                {
+                  "name": "crediservice-comercial",
+                  "value": 1
+                },
+                {
+                  "name": "credito-activo",
+                  "value": 1
+                },
+                {
+                  "name": "linea-de-credito-para-pago-de-impuestos",
+                  "value": 1
+                },
+                {
+                  "name": "pago-cesantias-porvenir",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "creditos-de-fomento",
+              "children": [
+                {
+                  "name": "bancoldex",
+                  "value": 1
+                },
+                {
+                  "name": "finagro",
+                  "value": 1
+                },
+                {
+                  "name": "findeter",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "creditos-sostenibles",
+              "children": [
+                {
+                  "name": "credito-constructor-sostenible",
+                  "value": 1
+                },
+                {
+                  "name": "desarrollo-sostenible",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "cupoagil-banco-de-bogota",
+              "value": 1
+            },
+            {
+              "name": "lineas-de-facturas",
+              "children": [
+                {
+                  "name": "confirming",
+                  "value": 1
+                },
+                {
+                  "name": "factoring-con-recurso",
+                  "value": 1
+                },
+                {
+                  "name": "factoring-sin-recurso",
+                  "value": 1
+                },
+                {
+                  "name": "financiacion-a-distribuidores",
+                  "value": 1
+                },
+                {
+                  "name": "pago-proveedores",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "recaudo-y-pagos",
+          "children": [
+            {
+              "name": "recaudos-en-medios-electronicos",
+              "children": [
+                {
+                  "name": "redes-externas",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "recaudos-y-pagos",
+          "children": [
+            {
+              "name": "medios-de-pago",
+              "children": [
+                {
+                  "name": "codigo-qr",
+                  "value": 1
+                },
+                {
+                  "name": "codigo-qr-negocio",
+                  "value": 1
+                },
+                {
+                  "name": "dale-negocio",
+                  "value": 1
+                },
+                {
+                  "name": "datafono-digital",
+                  "value": 1
+                },
+                {
+                  "name": "datafono-fisico",
+                  "value": 1
+                },
+                {
+                  "name": "link-pagos",
+                  "value": 1
+                },
+                {
+                  "name": "micrositio-abierto",
+                  "value": 1
+                },
+                {
+                  "name": "micrositio-cerrado",
+                  "value": 1
+                },
+                {
+                  "name": "producto-webcheckout",
+                  "value": 1
+                },
+                {
+                  "name": "transferencias-inmediatas",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "pagos",
+              "children": [
+                {
+                  "name": "api-de-pagos",
+                  "value": 1
+                },
+                {
+                  "name": "aportes-parafiscales-pila",
+                  "value": 1
+                },
+                {
+                  "name": "facilpass",
+                  "value": 1
+                },
+                {
+                  "name": "giros-empresariales",
+                  "value": 1
+                },
+                {
+                  "name": "impuestos-aduanas",
+                  "value": 1
+                },
+                {
+                  "name": "nomina-proveedores",
+                  "value": 1
+                },
+                {
+                  "name": "pensionados",
+                  "value": 1
+                },
+                {
+                  "name": "red-swift",
+                  "value": 1
+                },
+                {
+                  "name": "transportadora-valores",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "recaudo-en-medios-electronicos",
+              "children": [
+                {
+                  "name": "aportes-seguridad-social",
+                  "value": 1
+                },
+                {
+                  "name": "ath",
+                  "value": 1
+                },
+                {
+                  "name": "boton-pagos-internet-pse",
+                  "value": 1
+                },
+                {
+                  "name": "datafono",
+                  "value": 1
+                },
+                {
+                  "name": "debito-automatico",
+                  "value": 1
+                },
+                {
+                  "name": "tarjeta-adquirencia",
+                  "value": 1
+                },
+                {
+                  "name": "web-service",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "recaudo-en-oficinas",
+              "children": [
+                {
+                  "name": "consignacion-nacional",
+                  "value": 1
+                },
+                {
+                  "name": "consignacion-referenciada",
+                  "value": 1
+                },
+                {
+                  "name": "recaudo-con-codigo-de-barras",
+                  "value": 1
+                },
+                {
+                  "name": "recaudo-verde",
+                  "value": 1
+                },
+                {
+                  "name": "tarjeta-recaudo-empresarial",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "requerimientos-sistema",
+          "value": 1
+        },
+        {
+          "name": "soluciones-de-comercio-internacional-y-tesoreria",
+          "children": [
+            {
+              "name": "productos-de-tesoreria",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "soluciones-de-informacion",
+          "children": [
+            {
+              "name": "centro-de-servicios-corporativos",
+              "value": 1
+            },
+            {
+              "name": "portal-empresarial-y-corporativo",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "soluciones-de-leasing",
+          "value": 1
+        },
+        {
+          "name": "soluciones-de-logistica",
+          "children": [
+            {
+              "name": "gestion-de-comercio-exterior",
+              "value": 1
+            },
+            {
+              "name": "gestion-de-transporte-internacional",
+              "value": 1
+            },
+            {
+              "name": "logistica-de-almacenamiento",
+              "value": 1
+            },
+            {
+              "name": "servicios-financieros",
+              "value": 1
+            },
+            {
+              "name": "transporte-nacional-y-distribucion",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "soluciones-de-recaudo-y-pagos",
+          "children": [
+            {
+              "name": "pagos",
+              "children": [
+                {
+                  "name": "consignacion-en-efectivo",
+                  "value": 1
+                },
+                {
+                  "name": "pago-de-aportes-parafiscales-pila",
+                  "value": 1
+                },
+                {
+                  "name": "red-swift",
+                  "value": 1
+                },
+                {
+                  "name": "tarjeta-compras-institucionales",
+                  "value": 1
+                },
+                {
+                  "name": "tarjeta-debito-afinidad",
+                  "value": 1
+                },
+                {
+                  "name": "tarjeta-destinos",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "recaudos-en-medios-electronicos",
+              "children": [
+                {
+                  "name": "medios-electronicos-ath",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "sistema-nacional",
+              "children": [
+                {
+                  "name": "tarjeta-recaudo-empresarial",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "soluciones-fiduciarias",
+          "children": [
+            {
+              "name": "fiducia-de-administracion",
+              "children": [
+                {
+                  "name": "administracion-y-pagos",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "soluciones-financiacion-estructurada",
+          "value": 1
+        },
+        {
+          "name": "tarjetas-de-credito",
+          "children": [
+            {
+              "name": "compras-institucionales",
+              "value": 1
+            },
+            {
+              "name": "corporativa",
+              "value": 1
+            },
+            {
+              "name": "crecer",
+              "value": 1
+            },
+            {
+              "name": "destinos",
+              "value": 1
+            },
+            {
+              "name": "latam-business",
+              "value": 1
+            },
+            {
+              "name": "logros",
+              "value": 1
+            },
+            {
+              "name": "negocios",
+              "value": 1
+            },
+            {
+              "name": "negocios-elite",
+              "value": 1
+            },
+            {
+              "name": "tarjeta-visa-distribucion",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "tarjetas-debito",
+          "children": [
+            {
+              "name": "afinidad",
+              "value": 1
+            },
+            {
+              "name": "cedula-cafetera",
+              "value": 1
+            },
+            {
+              "name": "crecer",
+              "value": 1
+            },
+            {
+              "name": "logros",
+              "value": 1
+            },
+            {
+              "name": "negocios",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "mitrabajo",
+      "value": 1
+    },
+    {
+      "name": "personas",
+      "children": [
+        {
+          "name": "beneficios",
+          "children": [
+            {
+              "name": "plan-lealtad-mejores-puntos",
+              "value": 1
+            },
+            {
+              "name": "programa-lealtad-tuplus",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "bienes-e-inmuebles",
+          "value": 1
+        },
+        {
+          "name": "cdt",
+          "children": [
+            {
+              "name": "cdt-digital",
+              "value": 1
+            },
+            {
+              "name": "confianza",
+              "value": 1
+            },
+            {
+              "name": "digital",
+              "value": 1
+            },
+            {
+              "name": "tradicional",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "creditos",
+          "children": [
+            {
+              "name": "adelanto-de-nomina",
+              "value": 1
+            },
+            {
+              "name": "aportes-voluntarios",
+              "value": 1
+            },
+            {
+              "name": "ceropay",
+              "value": 1
+            },
+            {
+              "name": "colfuturo",
+              "value": 1
+            },
+            {
+              "name": "compra-de-cartera",
+              "value": 1
+            },
+            {
+              "name": "crediestudiantil",
+              "value": 1
+            },
+            {
+              "name": "crediservice",
+              "children": [
+                {
+                  "name": "vtua",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "cupo-de-sobregiro",
+              "value": 1
+            },
+            {
+              "name": "cupoagil",
+              "value": 1
+            },
+            {
+              "name": "libranza",
+              "value": 1
+            },
+            {
+              "name": "libre-inversion",
+              "value": 1
+            },
+            {
+              "name": "motos-de-alto-cilindraje",
+              "value": 1
+            },
+            {
+              "name": "portafolio-vivienda",
+              "children": [
+                {
+                  "name": "compra-cartera",
+                  "value": 1
+                },
+                {
+                  "name": "credito-remodelacion",
+                  "value": 1
+                },
+                {
+                  "name": "reduce-tu-cuota",
+                  "value": 1
+                },
+                {
+                  "name": "vivienda",
+                  "value": 1
+                },
+                {
+                  "name": "vivienda-sostenible",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "tipos-de-credito",
+              "value": 1
+            },
+            {
+              "name": "vehiculo",
+              "value": 1
+            },
+            {
+              "name": "vivienda",
+              "children": [
+                {
+                  "name": "compra-cartera",
+                  "value": 1
+                },
+                {
+                  "name": "vivienda",
+                  "value": 1
+                },
+                {
+                  "name": "vivienda-sostenible",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "cuenta-corriente",
+          "value": 1
+        },
+        {
+          "name": "cuenta-de-ahorros",
+          "children": [
+            {
+              "name": "afc",
+              "value": 1
+            },
+            {
+              "name": "agremiada",
+              "value": 1
+            },
+            {
+              "name": "alcancias",
+              "value": 1
+            },
+            {
+              "name": "aventura",
+              "value": 1
+            },
+            {
+              "name": "cuenta-facil",
+              "value": 1
+            },
+            {
+              "name": "cuenta-mi-trabajo",
+              "value": 1
+            },
+            {
+              "name": "dale",
+              "value": 1
+            },
+            {
+              "name": "econocuenta",
+              "value": 1
+            },
+            {
+              "name": "flexiahorro",
+              "value": 1
+            },
+            {
+              "name": "joven",
+              "value": 1
+            },
+            {
+              "name": "libreahorro",
+              "value": 1
+            },
+            {
+              "name": "nomina",
+              "value": 1
+            },
+            {
+              "name": "pensionados",
+              "value": 1
+            },
+            {
+              "name": "premium",
+              "value": 1
+            },
+            {
+              "name": "prestige",
+              "value": 1
+            },
+            {
+              "name": "programado",
+              "value": 1
+            },
+            {
+              "name": "remesas-internacionales",
+              "value": 1
+            },
+            {
+              "name": "rentahorro",
+              "value": 1
+            },
+            {
+              "name": "tarjetas-debito",
+              "children": [
+                {
+                  "name": "amazonia",
+                  "value": 1
+                },
+                {
+                  "name": "amparada",
+                  "value": 1
+                },
+                {
+                  "name": "asistencias-tarjeta-debito",
+                  "value": 1
+                },
+                {
+                  "name": "cedula-cafetera",
+                  "value": 1
+                },
+                {
+                  "name": "clasica",
+                  "value": 1
+                },
+                {
+                  "name": "codigo-cvv",
+                  "value": 1
+                },
+                {
+                  "name": "preferente",
+                  "value": 1
+                },
+                {
+                  "name": "premium",
+                  "value": 1
+                },
+                {
+                  "name": "unicef",
+                  "value": 1
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "experiencias-aval",
+          "value": 1
+        },
+        {
+          "name": "extractos",
+          "value": 1
+        },
+        {
+          "name": "informacion-productos-servicios",
+          "children": [
+            {
+              "name": "formato-apertura-productos",
+              "value": 1
+            },
+            {
+              "name": "terminos-condiciones",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "leasing",
+          "children": [
+            {
+              "name": "habitacional",
+              "value": 1
+            },
+            {
+              "name": "habitacional-no-familiar",
+              "value": 1
+            },
+            {
+              "name": "leasing-inmobiliario",
+              "value": 1
+            },
+            {
+              "name": "maquinaria-equipo-software",
+              "value": 1
+            },
+            {
+              "name": "recarga-leasing",
+              "value": 1
+            },
+            {
+              "name": "vehiculos",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "seguros",
+          "children": [
+            {
+              "name": "accidentes-personales-para-credito-de-libranza",
+              "value": 1
+            },
+            {
+              "name": "auto-protegido-plus",
+              "value": 1
+            },
+            {
+              "name": "bolso-protegido",
+              "value": 1
+            },
+            {
+              "name": "cancer",
+              "value": 1
+            },
+            {
+              "name": "cuenta-protegida",
+              "value": 1
+            },
+            {
+              "name": "cuenta-protegida-integral",
+              "value": 1
+            },
+            {
+              "name": "cuota-protegida",
+              "value": 1
+            },
+            {
+              "name": "cuota-protegida-asalariados",
+              "value": 1
+            },
+            {
+              "name": "cuota-protegida-asalariados-autos",
+              "value": 1
+            },
+            {
+              "name": "cuota-protegida-asalariados-crediservice",
+              "value": 1
+            },
+            {
+              "name": "cuota-protegida-independientes",
+              "value": 1
+            },
+            {
+              "name": "cuota-protegida-independientes-autos",
+              "value": 1
+            },
+            {
+              "name": "cuota-protegida-libranza",
+              "value": 1
+            },
+            {
+              "name": "cuota-protegida-vivienda",
+              "value": 1
+            },
+            {
+              "name": "cuota-protegida-vivienda-asalariados",
+              "value": 1
+            },
+            {
+              "name": "cuota-protegida-vivienda-independientes",
+              "value": 1
+            },
+            {
+              "name": "enfermedad-grave",
+              "value": 1
+            },
+            {
+              "name": "hogar-seguro",
+              "value": 1
+            },
+            {
+              "name": "microempresario-seguro",
+              "value": 1
+            },
+            {
+              "name": "movilidad-segura",
+              "value": 1
+            },
+            {
+              "name": "multiasistencias",
+              "value": 1
+            },
+            {
+              "name": "pensionados-libranza-bienestar-y-vida",
+              "value": 1
+            },
+            {
+              "name": "polizas-asociadas-a-creditos",
+              "children": [
+                {
+                  "name": "endosadas",
+                  "value": 1
+                },
+                {
+                  "name": "endozadas",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "proteccion-integral-cancer",
+              "value": 1
+            },
+            {
+              "name": "proteccion-integral-familia",
+              "value": 1
+            },
+            {
+              "name": "proteccion-mascotas",
+              "value": 1
+            },
+            {
+              "name": "proteccion-personal",
+              "value": 1
+            },
+            {
+              "name": "proteccion-vida",
+              "value": 1
+            },
+            {
+              "name": "retiro-mas-seguro",
+              "value": 1
+            },
+            {
+              "name": "segmento-experiencia",
+              "value": 1
+            },
+            {
+              "name": "seguro-proteccion-financiera-empleados",
+              "value": 1
+            },
+            {
+              "name": "seguro-proteccion-financiera-independientes",
+              "value": 1
+            },
+            {
+              "name": "seguro-proteccion-salud",
+              "value": 1
+            },
+            {
+              "name": "seguro-proteccion-vida",
+              "value": 1
+            },
+            {
+              "name": "siniestros",
+              "value": 1
+            },
+            {
+              "name": "tarjeta-protegida-integral",
+              "value": 1
+            },
+            {
+              "name": "vida-ahorrador",
+              "value": 1
+            },
+            {
+              "name": "vida-alto-valor",
+              "value": 1
+            }
+          ]
+        },
+        {
+          "name": "servicio-transfiya",
+          "value": 1
+        },
+        {
+          "name": "tarjetas-de-credito",
+          "children": [
+            {
+              "name": "aliada",
+              "children": [
+                {
+                  "name": "vtu",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "asistencias",
+              "value": 1
+            },
+            {
+              "name": "biomax-clasica",
+              "value": 1
+            },
+            {
+              "name": "biomax-gold",
+              "value": 1
+            },
+            {
+              "name": "black-master",
+              "value": 1
+            },
+            {
+              "name": "cerorollo",
+              "value": 1
+            },
+            {
+              "name": "clasica",
+              "children": [
+                {
+                  "name": "vtu",
+                  "value": 1
+                }
+              ]
+            },
+            {
+              "name": "clasica-latam-pass",
+              "value": 1
+            },
+            {
+              "name": "compra-cartera",
+              "value": 1
+            },
+            {
+              "name": "economia",
+              "value": 1
+            },
+            {
+              "name": "gold",
+              "value": 1
+            },
+            {
+              "name": "gold-latam-pass",
+              "value": 1
+            },
+            {
+              "name": "infinite",
+              "value": 1
+            },
+            {
+              "name": "instacupo",
+              "value": 1
+            },
+            {
+              "name": "movistar",
+              "value": 1
+            },
+            {
+              "name": "movistar-clasica",
+              "value": 1
+            },
+            {
+              "name": "movistar-gold",
+              "value": 1
+            },
+            {
+              "name": "movistar-platinum",
+              "value": 1
+            },
+            {
+              "name": "on",
+              "value": 1
+            },
+            {
+              "name": "platinum",
+              "value": 1
+            },
+            {
+              "name": "platinum-latam-pass",
+              "value": 1
+            },
+            {
+              "name": "signature",
+              "value": 1
+            },
+            {
+              "name": "signature-latam-pass",
+              "value": 1
+            },
+            {
+              "name": "tarjetas-latam",
+              "value": 1
+            },
+            {
+              "name": "visa.com.co",
+              "children": [
+                {
+                  "name": "es_co",
+                  "children": [
+                    {
+                      "name": "promociones",
+                      "children": [
+                        {
+                          "name": "servicios-medicos-de-emergencia-internacional",
+                          "children": [
+                            {
+                              "name": "153027",
+                              "value": 1
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "vivienda",
+          "children": [
+            {
+              "name": "credito-remodelacion",
+              "value": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "seguros",
+      "children": [
+        {
+          "name": "cuota-protegida-independientes-crediservice",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "servilinea",
+      "value": 1
+    },
+    {
+      "name": "sostenibilidad",
+      "children": [
+        {
+          "name": "biblioteca",
+          "value": 1
+        },
+        {
+          "name": "library",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "tag-aval",
+      "value": 1
+    },
+    {
+      "name": "tasas-y-tarifas",
+      "children": [
+        {
+          "name": "tarifas-empresas",
+          "value": 1
+        },
+        {
+          "name": "tarifas-internacional",
+          "value": 1
+        },
+        {
+          "name": "tarifas-personas",
+          "value": 1
+        },
+        {
+          "name": "tarifas-pyme",
+          "value": 1
+        },
+        {
+          "name": "tasas-2014",
+          "value": 1
+        },
+        {
+          "name": "tasas-2022",
+          "value": 1
+        },
+        {
+          "name": "tasas-2023",
+          "value": 1
+        },
+        {
+          "name": "tasas-2024",
+          "value": 1
+        },
+        {
+          "name": "tasas-2025",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "tyc",
+      "children": [
+        {
+          "name": "2025-alianza-0-interes-claro",
+          "value": 1
+        },
+        {
+          "name": "2025-alianza-alfa",
+          "value": 1
+        },
+        {
+          "name": "2025-alianza-le-coq-sportif-colombia",
+          "value": 1
+        },
+        {
+          "name": "2025-alianza-price-travel",
+          "value": 1
+        },
+        {
+          "name": "2025-crediconvenio-digital",
+          "value": 1
+        },
+        {
+          "name": "2025-cuenta-de-nomina",
+          "value": 1
+        },
+        {
+          "name": "2025-enrolamiento-apple-pay-tc-mastercard",
+          "value": 1
+        },
+        {
+          "name": "2025-facturacion-apple-pay-tc-mastercard",
+          "value": 1
+        },
+        {
+          "name": "2025-la-cuenta-que-tu-camello-merece",
+          "value": 1
+        },
+        {
+          "name": "2025-llaves-bre-b-te-abren-las-puertas",
+          "value": 1
+        },
+        {
+          "name": "2025-mac-center-0-intereses",
+          "value": 1
+        },
+        {
+          "name": "2025-mercado-libre",
+          "value": 1
+        },
+        {
+          "name": "2025-ofertas-viajes-shop-b2b",
+          "value": 1
+        },
+        {
+          "name": "2025-recibe-pagos-con-qr-y-gana",
+          "value": 1
+        },
+        {
+          "name": "2025-registra-tus-llaves-bre-b-agosto",
+          "value": 1
+        },
+        {
+          "name": "2025-tc-0-ishop-colombia",
+          "value": 1
+        },
+        {
+          "name": "2025-tigo-0-porciento-interes",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

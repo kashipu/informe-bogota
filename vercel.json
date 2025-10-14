@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "data/**/*.json",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "nowps/data/**/*.json",
+      "use": "@vercel/static"
+    }
+  ]
+}
