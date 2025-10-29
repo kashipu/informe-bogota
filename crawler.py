@@ -32,7 +32,7 @@ import urllib.robotparser as robotparser
 
 # =========================== CONFIGURACIÓN =========================== #
 
-BASE_URL = "https://www.bancodebogota.com/personas"  # URL inicial
+BASE_URL = "https://sherpadesignsystem.labdigitalbdbtvs.com/home"  # URL inicial
 MAX_PAGES = float('inf')   # Poner un número alto o float('inf') para escanear todo el portal
 MAX_DEPTH = 8              # profundidad máxima
 DELAY = 0.5                # segundos entre solicitudes
@@ -43,7 +43,7 @@ VERIFY_TLS = True          # si hay problemas de SSL, prueba False (no recomenda
 # Descubrimiento adicional por sitemap
 USE_SITEMAP = True
 SITEMAP_URLS = [
-    "https://www.bancodebogota.com/sitemap.xml",
+    "",
 ]
 
 # Si una URL está bloqueada por robots, aún la registramos (sin hacer GET)
