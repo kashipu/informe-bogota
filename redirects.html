@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecciones /wps — Banco de Bogotá</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #343a40;
+        }
+        .main-header {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 15px 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .main-header h1 { margin: 0; font-size: 22px; }
+        .back-link {
+            color: #667eea;
+            text-decoration: none;
+            padding: 8px 16px;
+            border: 1px solid #667eea;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .back-link:hover { background: #667eea; color: white; }
+        .container { max-width: 1400px; margin: 30px auto; padding: 0 20px; }
+        .panel {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        .panel h2 { margin-top: 0; color: #667eea; }
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+        .stat-box {
+            text-align: center;
+            padding: 16px;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+        .stat-box .number { font-size: 28px; font-weight: bold; color: #667eea; }
+        .stat-box .label { color: #6c757d; font-size: 12px; margin-top: 4px; }
+        .controls {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .controls input, .controls select {
+            padding: 8px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .controls input { flex: 1; min-width: 240px; }
+        .tabs {
+            display: flex;
+            gap: 4px;
+            border-bottom: 2px solid #e9ecef;
+            margin-bottom: 16px;
+        }
+        .tab {
+            padding: 10px 18px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 14px;
+            color: #6c757d;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+        }
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+            font-weight: 600;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 13px;
+        }
+        th, td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid #e9ecef;
+            vertical-align: top;
+        }
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #495057;
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+            user-select: none;
+        }
+        th:hover { background: #e9ecef; }
+        tr:hover { background: #fafbfc; }
+        td.url { word-break: break-all; max-width: 480px; }
+        td.url a { color: #667eea; text-decoration: none; }
+        td.url a:hover { text-decoration: underline; }
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 11px;
+            font-weight: 600;
+        }
+        .badge-3xx { background: #fff3cd; color: #856404; }
+        .badge-meta { background: #d1ecf1; color: #0c5460; }
+        .badge-js { background: #e2e3f1; color: #383d51; }
+        .badge-2xx { background: #d4edda; color: #155724; }
+        .badge-4xx, .badge-5xx, .badge-err { background: #f8d7da; color: #721c24; }
+        .badge-none { background: #e9ecef; color: #495057; }
+        .table-wrap {
+            max-height: 70vh;
+            overflow: auto;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+        }
+        .pagination {
+            display: flex;
+            gap: 8px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 16px;
+            font-size: 14px;
+        }
+        .pagination button {
+            padding: 6px 12px;
+            border: 1px solid #ced4da;
+            background: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .pagination button:disabled { opacity: 0.4; cursor: not-allowed; }
+        .arrow { color: #6c757d; }
+        .empty {
+            text-align: center;
+            padding: 40px;
+            color: #6c757d;
+        }
+        .loading { text-align: center; padding: 40px; color: #6c757d; }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <h1>🔁 Redirecciones /wps</h1>
+        <a href="index.html" class="back-link">← Volver al Inicio</a>
+    </header>
+
+    <div class="container">
+        <div class="panel">
+            <h2>Resumen de migración</h2>
+            <div id="summary" class="stats">
+                <div class="loading">Cargando…</div>
+            </div>
+        </div>
+
+        <div class="panel">
+            <h2>Tabla de redirecciones</h2>
+            <div class="tabs">
+                <button class="tab active" data-view="migrated">✅ Migradas (de /wps a URL limpia)</button>
+                <button class="tab" data-view="pending">⏳ Pendientes (siguen en /wps)</button>
+                <button class="tab" data-view="errors">⚠️ Errores</button>
+            </div>
+            <div class="controls">
+                <input id="search" placeholder="Buscar por URL origen o destino…" />
+                <select id="typeFilter">
+                    <option value="">Todos los tipos</option>
+                    <option value="http_3xx">http_3xx</option>
+                    <option value="meta_refresh">meta_refresh</option>
+                    <option value="js">js</option>
+                    <option value="none">none</option>
+                </select>
+                <span id="rowCount" style="color:#6c757d;font-size:13px;"></span>
+            </div>
+            <div class="table-wrap">
+                <table id="tbl">
+                    <thead id="thead"></thead>
+                    <tbody id="tbody"><tr><td class="loading">Cargando data/wps_redirects.json…</td></tr></tbody>
+                </table>
+            </div>
+            <div class="pagination">
+                <button id="prev">‹ Anterior</button>
+                <span id="pageInfo">—</span>
+                <button id="next">Siguiente ›</button>
+            </div>
+        </div>
+    </div>
+
+<script>
+const PAGE_SIZE = 50;
+let DATA = null;
+let view = "migrated";
+let filtered = [];
+let page = 0;
+let sortKey = null;
+let sortDir = 1;
+
+const COLUMNS = {
+    migrated: [
+        { key: "from",         label: "Origen (/wps)",   url: true },
+        { key: "to",           label: "Destino limpio",  url: true },
+        { key: "n_hops",       label: "Saltos" },
+        { key: "redirect_type",label: "Tipo",            badge: true },
+        { key: "final_status", label: "Status final" },
+    ],
+    pending: [
+        { key: "url",          label: "URL",             url: true },
+        { key: "final_url",    label: "Destino final",   url: true },
+        { key: "has_redirect", label: "¿Redirige?" },
+        { key: "final_status", label: "Status final" },
+    ],
+    errors: [
+        { key: "source_url",   label: "URL",             url: true },
+        { key: "error",        label: "Error" },
+        { key: "redirect_type",label: "Tipo",            badge: true },
+        { key: "elapsed_ms",   label: "ms" },
+    ],
+};
+
+function fmt(v) {
+    if (v === null || v === undefined) return "—";
+    if (typeof v === "boolean") return v ? "Sí" : "No";
+    return String(v);
+}
+
+function badge(type) {
+    const map = { http_3xx: "badge-3xx", meta_refresh: "badge-meta", js: "badge-js", none: "badge-none", error: "badge-err" };
+    const cls = map[type] || "badge-none";
+    return `<span class="badge ${cls}">${type || "—"}</span>`;
+}
+
+function statusBadge(sc) {
+    if (sc === null || sc === undefined) return `<span class="badge badge-err">err</span>`;
+    let cls = "badge-none";
+    if (sc >= 200 && sc < 300) cls = "badge-2xx";
+    else if (sc >= 300 && sc < 400) cls = "badge-3xx";
+    else if (sc >= 400) cls = "badge-4xx";
+    return `<span class="badge ${cls}">${sc}</span>`;
+}
+
+function getRows() {
+    if (!DATA) return [];
+    if (view === "migrated") return DATA.migration_map || [];
+    if (view === "pending")  return DATA.pending_migration || [];
+    if (view === "errors")   return DATA.errors || [];
+    return [];
+}
+
+function applyFilter() {
+    const q = document.getElementById("search").value.toLowerCase().trim();
+    const t = document.getElementById("typeFilter").value;
+    let rows = getRows().slice();
+    if (q) {
+        rows = rows.filter(r =>
+            Object.values(r).some(v => v && String(v).toLowerCase().includes(q))
+        );
+    }
+    if (t) rows = rows.filter(r => r.redirect_type === t);
+    if (sortKey) {
+        rows.sort((a, b) => {
+            const av = a[sortKey], bv = b[sortKey];
+            if (av === bv) return 0;
+            if (av === null || av === undefined) return 1;
+            if (bv === null || bv === undefined) return -1;
+            return (av > bv ? 1 : -1) * sortDir;
+        });
+    }
+    filtered = rows;
+    page = 0;
+    render();
+}
+
+function render() {
+    const cols = COLUMNS[view];
+    const thead = document.getElementById("thead");
+    thead.innerHTML = "<tr>" + cols.map(c =>
+        `<th data-key="${c.key}">${c.label} <span class="arrow">${sortKey === c.key ? (sortDir > 0 ? "▲" : "▼") : ""}</span></th>`
+    ).join("") + "</tr>";
+    thead.querySelectorAll("th").forEach(th => {
+        th.onclick = () => {
+            const k = th.dataset.key;
+            if (sortKey === k) sortDir = -sortDir;
+            else { sortKey = k; sortDir = 1; }
+            applyFilter();
+        };
+    });
+
+    const tbody = document.getElementById("tbody");
+    const total = filtered.length;
+    document.getElementById("rowCount").textContent = `${total.toLocaleString()} fila${total === 1 ? "" : "s"}`;
+
+    if (total === 0) {
+        tbody.innerHTML = `<tr><td class="empty" colspan="${cols.length}">Sin resultados</td></tr>`;
+    } else {
+        const start = page * PAGE_SIZE;
+        const slice = filtered.slice(start, start + PAGE_SIZE);
+        tbody.innerHTML = slice.map(r => "<tr>" + cols.map(c => {
+            let v = r[c.key];
+            if (c.url && v) return `<td class="url"><a href="${v}" target="_blank" rel="noopener">${v}</a></td>`;
+            if (c.badge) return `<td>${badge(v)}</td>`;
+            if (c.key === "final_status") return `<td>${statusBadge(v)}</td>`;
+            return `<td>${fmt(v)}</td>`;
+        }).join("") + "</tr>").join("");
+    }
+
+    const totalPages = Math.max(1, Math.ceil(total / PAGE_SIZE));
+    document.getElementById("pageInfo").textContent = `Página ${page + 1} de ${totalPages}`;
+    document.getElementById("prev").disabled = page === 0;
+    document.getElementById("next").disabled = page >= totalPages - 1;
+}
+
+function renderSummary() {
+    const s = DATA.summary || {};
+    const el = document.getElementById("summary");
+    const cells = [
+        ["Total /wps verificadas", s.total_urls_checked],
+        ["Migradas (fuera de /wps)", s.migrated_out_of_wps],
+        ["Aún en /wps con redirect", s.still_in_wps_with_redirect],
+        ["Sin redirect (siguen /wps)", s.no_redirect_still_wps],
+        ["Errores", s.errors],
+        ["% migración", (s.migration_percent ?? 0) + "%"],
+    ];
+    el.innerHTML = cells.map(([l, n]) =>
+        `<div class="stat-box"><div class="number">${n ?? "—"}</div><div class="label">${l}</div></div>`
+    ).join("");
+}
+
+document.querySelectorAll(".tab").forEach(t => {
+    t.onclick = () => {
+        document.querySelectorAll(".tab").forEach(x => x.classList.remove("active"));
+        t.classList.add("active");
+        view = t.dataset.view;
+        sortKey = null;
+        applyFilter();
+    };
+});
+document.getElementById("search").oninput = applyFilter;
+document.getElementById("typeFilter").onchange = applyFilter;
+document.getElementById("prev").onclick = () => { if (page > 0) { page--; render(); } };
+document.getElementById("next").onclick = () => { page++; render(); };
+
+fetch("data/wps_redirects.json")
+    .then(r => {
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+    })
+    .then(j => {
+        DATA = j;
+        // Normaliza errors: vienen con source_url, error, elapsed_ms, redirect_type
+        renderSummary();
+        applyFilter();
+    })
+    .catch(e => {
+        document.getElementById("tbody").innerHTML =
+            `<tr><td class="empty" colspan="5">No se pudo cargar data/wps_redirects.json — ¿corriste <code>python crawler2.py</code>? (${e.message})</td></tr>`;
+        document.getElementById("summary").innerHTML =
+            `<div class="empty" style="grid-column:1/-1">Sin datos</div>`;
+    });
+</script>
+</body>
+</html>

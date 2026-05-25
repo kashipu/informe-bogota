@@ -1,0 +1,670 @@
+{
+  "totals": {
+    "records_read": 2146,
+    "included": 899,
+    "excluded_by_path": 1015,
+    "skipped_records": 18,
+    "duplicates_in_input": 214
+  },
+  "status_distribution": {
+    "200": 873,
+    "404": 26
+  },
+  "language_distribution": {
+    "en-us": 898,
+    "unknown": 1
+  },
+  "schema_org_types": {
+    "BankAccount": 1,
+    "ItemList": 1,
+    "FAQPage": 1
+  },
+  "seo_issues_distribution": {
+    "missing_description": 725,
+    "missing_h1": 54,
+    "missing_canonical": 32,
+    "title_too_short": 87,
+    "title_too_long": 73,
+    "thin_content": 23,
+    "description_too_long": 17
+  },
+  "sections": [
+    {
+      "section": "empresas",
+      "pages": 212,
+      "avg_ms": 465,
+      "p95_ms": 657,
+      "avg_words": 550,
+      "seo_issues": 172
+    },
+    {
+      "section": "personas",
+      "pages": 205,
+      "avg_ms": 477,
+      "p95_ms": 691,
+      "avg_words": 965,
+      "seo_issues": 178
+    },
+    {
+      "section": "tyc",
+      "pages": 168,
+      "avg_ms": 387,
+      "p95_ms": 504,
+      "avg_words": 1906,
+      "seo_issues": 168
+    },
+    {
+      "section": "atencion-al-cliente",
+      "pages": 140,
+      "avg_ms": 398,
+      "p95_ms": 543,
+      "avg_words": 550,
+      "seo_issues": 139
+    },
+    {
+      "section": "educacion-financiera",
+      "pages": 31,
+      "avg_ms": 394,
+      "p95_ms": 481,
+      "avg_words": 807,
+      "seo_issues": 27
+    },
+    {
+      "section": "banca-empresas",
+      "pages": 21,
+      "avg_ms": 542,
+      "p95_ms": 868,
+      "avg_words": 613,
+      "seo_issues": 21
+    },
+    {
+      "section": "tasas-y-tarifas",
+      "pages": 18,
+      "avg_ms": 410,
+      "p95_ms": null,
+      "avg_words": 95,
+      "seo_issues": 18
+    },
+    {
+      "section": "sostenibilidad",
+      "pages": 17,
+      "avg_ms": 487,
+      "p95_ms": null,
+      "avg_words": 678,
+      "seo_issues": 17
+    },
+    {
+      "section": "banca-personas",
+      "pages": 15,
+      "avg_ms": 391,
+      "p95_ms": null,
+      "avg_words": 566,
+      "seo_issues": 15
+    },
+    {
+      "section": "fifa-2026",
+      "pages": 13,
+      "avg_ms": 537,
+      "p95_ms": null,
+      "avg_words": 1166,
+      "seo_issues": 12
+    },
+    {
+      "section": "alianzas",
+      "pages": 9,
+      "avg_ms": 485,
+      "p95_ms": null,
+      "avg_words": 679,
+      "seo_issues": 9
+    },
+    {
+      "section": "sustainability",
+      "pages": 6,
+      "avg_ms": 550,
+      "p95_ms": null,
+      "avg_words": 756,
+      "seo_issues": 6
+    },
+    {
+      "section": "diversidad-e-inclusion",
+      "pages": 5,
+      "avg_ms": 568,
+      "p95_ms": null,
+      "avg_words": 650,
+      "seo_issues": 3
+    },
+    {
+      "section": "nuestra-organizacion",
+      "pages": 4,
+      "avg_ms": 538,
+      "p95_ms": null,
+      "avg_words": 388,
+      "seo_issues": 4
+    },
+    {
+      "section": "fundacion-banco-de-bogota",
+      "pages": 4,
+      "avg_ms": 360,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 4
+    },
+    {
+      "section": "bre-b",
+      "pages": 2,
+      "avg_ms": 481,
+      "p95_ms": null,
+      "avg_words": 1145,
+      "seo_issues": 2
+    },
+    {
+      "section": "pymes",
+      "pages": 1,
+      "avg_ms": 375,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    },
+    {
+      "section": "aliados-pyme",
+      "pages": 1,
+      "avg_ms": 384,
+      "p95_ms": null,
+      "avg_words": 260,
+      "seo_issues": 1
+    },
+    {
+      "section": "buscador",
+      "pages": 1,
+      "avg_ms": 343,
+      "p95_ms": null,
+      "avg_words": 8,
+      "seo_issues": 1
+    },
+    {
+      "section": "BuscadordePuntosAval",
+      "pages": 1,
+      "avg_ms": 685,
+      "p95_ms": null,
+      "avg_words": 122,
+      "seo_issues": 1
+    },
+    {
+      "section": "dia-de-la-mujer-y-del-hombre",
+      "pages": 1,
+      "avg_ms": 616,
+      "p95_ms": null,
+      "avg_words": 462,
+      "seo_issues": 1
+    },
+    {
+      "section": "exte-cuenta-ahorros",
+      "pages": 1,
+      "avg_ms": 438,
+      "p95_ms": null,
+      "avg_words": 696,
+      "seo_issues": 1
+    },
+    {
+      "section": "informe-de-gestion",
+      "pages": 1,
+      "avg_ms": 462,
+      "p95_ms": null,
+      "avg_words": 458,
+      "seo_issues": 1
+    },
+    {
+      "section": "informe-gestion-2024-3",
+      "pages": 1,
+      "avg_ms": 496,
+      "p95_ms": null,
+      "avg_words": 458,
+      "seo_issues": 1
+    },
+    {
+      "section": "informe-gestion-2025",
+      "pages": 1,
+      "avg_ms": 654,
+      "p95_ms": null,
+      "avg_words": 508,
+      "seo_issues": 1
+    },
+    {
+      "section": "management-report-2024",
+      "pages": 1,
+      "avg_ms": 1381,
+      "p95_ms": null,
+      "avg_words": 3193,
+      "seo_issues": 1
+    },
+    {
+      "section": "pagina-404",
+      "pages": 1,
+      "avg_ms": 320,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    },
+    {
+      "section": "proyecto-unicef",
+      "pages": 1,
+      "avg_ms": 448,
+      "p95_ms": null,
+      "avg_words": 428,
+      "seo_issues": 1
+    },
+    {
+      "section": "tag-aval",
+      "pages": 1,
+      "avg_ms": 622,
+      "p95_ms": null,
+      "avg_words": 936,
+      "seo_issues": 1
+    },
+    {
+      "section": "transparencia",
+      "pages": 1,
+      "avg_ms": 713,
+      "p95_ms": null,
+      "avg_words": 8075,
+      "seo_issues": 1
+    },
+    {
+      "section": "depositos-2026",
+      "pages": 1,
+      "avg_ms": 395,
+      "p95_ms": null,
+      "avg_words": 603,
+      "seo_issues": 0
+    },
+    {
+      "section": "atenci%C3%B3n-al-cliente",
+      "pages": 1,
+      "avg_ms": 323,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    },
+    {
+      "section": "servilinea",
+      "pages": 1,
+      "avg_ms": 344,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    },
+    {
+      "section": "consulta-tasas-y-tarifas",
+      "pages": 1,
+      "avg_ms": 340,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    },
+    {
+      "section": "fifa-2026-en",
+      "pages": 1,
+      "avg_ms": 747,
+      "p95_ms": null,
+      "avg_words": 1190,
+      "seo_issues": 1
+    },
+    {
+      "section": "personas-test",
+      "pages": 1,
+      "avg_ms": 731,
+      "p95_ms": null,
+      "avg_words": 922,
+      "seo_issues": 0
+    },
+    {
+      "section": "cercademi",
+      "pages": 1,
+      "avg_ms": 401,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    },
+    {
+      "section": "bienvenida",
+      "pages": 1,
+      "avg_ms": 330,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    },
+    {
+      "section": "tarjetas-de-credito",
+      "pages": 1,
+      "avg_ms": 307,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    },
+    {
+      "section": "sostenibiidad",
+      "pages": 1,
+      "avg_ms": 394,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    },
+    {
+      "section": "programa-anticorrupcion-antisoborno",
+      "pages": 1,
+      "avg_ms": 273,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    },
+    {
+      "section": "BuscadordePuntosbogota",
+      "pages": 1,
+      "avg_ms": 285,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    },
+    {
+      "section": "portal",
+      "pages": 1,
+      "avg_ms": 292,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    },
+    {
+      "section": "seguros",
+      "pages": 1,
+      "avg_ms": 287,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    },
+    {
+      "section": "mitrabajo",
+      "pages": 1,
+      "avg_ms": 349,
+      "p95_ms": null,
+      "avg_words": 140,
+      "seo_issues": 1
+    }
+  ],
+  "duplicates": {
+    "by_title": {
+      "groups": 40,
+      "pages_affected": 143,
+      "examples": [
+        {
+          "title": "Instructivos Portales Corporate - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/empresas/portales",
+            "https://www.bancodebogota.com/empresas/portales/instructivo-activacion-de-cheques",
+            "https://www.bancodebogota.com/empresas/portales/instructivo-ajuste-contrasena",
+            "https://www.bancodebogota.com/empresas/portales/instructivo-consulta-de-facturacion",
+            "https://www.bancodebogota.com/empresas/portales/instructivo-consultas-y-pagos-pse"
+          ],
+          "n": 35
+        },
+        {
+          "title": "Pagina 404 - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/pymes",
+            "https://www.bancodebogota.com/pagina-404",
+            "https://www.bancodebogota.com/atenci%C3%B3n-al-cliente/preguntas-frecuentes/medios-de-pago/datafono-fisico",
+            "https://www.bancodebogota.com/servilinea",
+            "https://www.bancodebogota.com/atencion-al-cliente/preguntas-frecuentes/credito-de-vivienda"
+          ],
+          "n": 27
+        },
+        {
+          "title": "VTU - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/personas/cdt/tradicional/vtu",
+            "https://www.bancodebogota.com/personas/creditos/crediservice/vtua",
+            "https://www.bancodebogota.com/personas/creditos/libre-inversion/vtu",
+            "https://www.bancodebogota.com/personas/tarjetas-de-credito/aliada/vtu"
+          ],
+          "n": 4
+        },
+        {
+          "title": "Llaves Bre-B - Nunca fue más fácil transferir dinero - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/instructivos/uso-de-bre-b",
+            "https://www.bancodebogota.com/atencion-al-cliente/instructivos/bre-b-en-whatsapp",
+            "https://www.bancodebogota.com/bre-b/llaves"
+          ],
+          "n": 3
+        },
+        {
+          "title": "Cupoágil Banco de Bogotá - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/preguntas-frecuentes/cupoagil-banco-de-bogota",
+            "https://www.bancodebogota.com/empresas/productos-de-credito/cupoagil-banco-de-bogota",
+            "https://www.bancodebogota.com/personas/creditos/cupoagil"
+          ],
+          "n": 3
+        },
+        {
+          "title": "Asistencias tarjetas de crédito | Hogar, Médico y Viajes seguros - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/personas/tarjetas-de-credito/asistencias",
+            "https://www.bancodebogota.com/personas/tarjetas-de-credito/asistencias/visa-airport-companion",
+            "https://www.bancodebogota.com/personas/tarjetas-de-credito/asistencias/salas-vip-tc-black-mastercard"
+          ],
+          "n": 3
+        },
+        {
+          "title": "Banco de Bogotá - Solicita productos en línea - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/personas",
+            "https://www.bancodebogota.com/personas-test"
+          ],
+          "n": 2
+        },
+        {
+          "title": "Canales - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/canales",
+            "https://www.bancodebogota.com/atencion-al-cliente/canales/"
+          ],
+          "n": 2
+        },
+        {
+          "title": "Token - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/canales/canales-digitales/token",
+            "https://www.bancodebogota.com/atencion-al-cliente/preguntas-frecuentes/token"
+          ],
+          "n": 2
+        },
+        {
+          "title": "Banca móvil - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/canales/canales-digitales/banca-movil",
+            "https://www.bancodebogota.com/atencion-al-cliente/preguntas-frecuentes/banca-movil"
+          ],
+          "n": 2
+        },
+        {
+          "title": "Defensor del consumidor - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/defensor-del-consumidor",
+            "https://www.bancodebogota.com/educacion-financiera/nuestra-organizacion/defensor-del-consumidor"
+          ],
+          "n": 2
+        },
+        {
+          "title": "Beneficios - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/impuestos/beneficios",
+            "https://www.bancodebogota.com/personas/beneficios"
+          ],
+          "n": 2
+        },
+        {
+          "title": "Crediservice - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/preguntas-frecuentes/crediservice",
+            "https://www.bancodebogota.com/personas/creditos/crediservice"
+          ],
+          "n": 2
+        },
+        {
+          "title": "Cuenta corriente - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/preguntas-frecuentes/cuenta-corriente",
+            "https://www.bancodebogota.com/empresas/inversion-y-liquidez/cuenta-corriente"
+          ],
+          "n": 2
+        },
+        {
+          "title": "Medios de pago - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/preguntas-frecuentes/medios-de-pago",
+            "https://www.bancodebogota.com/empresas/recaudos-y-pagos/medios-de-pago"
+          ],
+          "n": 2
+        },
+        {
+          "title": "Datafono fisico - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/preguntas-frecuentes/medios-de-pago/datafono-fisico",
+            "https://www.bancodebogota.com/empresas/recaudos-y-pagos/medios-de-pago/datafono-fisico"
+          ],
+          "n": 2
+        },
+        {
+          "title": "Datafono digital - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/preguntas-frecuentes/medios-de-pago/datafono-digital",
+            "https://www.bancodebogota.com/empresas/recaudos-y-pagos/medios-de-pago/datafono-digital"
+          ],
+          "n": 2
+        },
+        {
+          "title": "Micrositio abierto - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/preguntas-frecuentes/medios-de-pago/micrositio-abierto",
+            "https://www.bancodebogota.com/empresas/recaudos-y-pagos/medios-de-pago/micrositio-abierto"
+          ],
+          "n": 2
+        },
+        {
+          "title": "Micrositio cerrado - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/preguntas-frecuentes/medios-de-pago/micrositio-cerrado",
+            "https://www.bancodebogota.com/empresas/recaudos-y-pagos/medios-de-pago/micrositio-cerrado"
+          ],
+          "n": 2
+        },
+        {
+          "title": "Link de pagos - bancodebogota.com",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/preguntas-frecuentes/medios-de-pago/link-de-pagos",
+            "https://www.bancodebogota.com/empresas/recaudos-y-pagos/medios-de-pago/link-pagos"
+          ],
+          "n": 2
+        }
+      ]
+    },
+    "by_description": {
+      "groups": 14,
+      "pages_affected": 93
+    },
+    "by_content_hash": {
+      "groups": 8,
+      "pages_affected": 40,
+      "examples": [
+        {
+          "hash": "fbd631d6e2c01808dbaf0f38acf567e6",
+          "urls": [
+            "https://www.bancodebogota.com/pymes",
+            "https://www.bancodebogota.com/atenci%C3%B3n-al-cliente/preguntas-frecuentes/medios-de-pago/datafono-fisico",
+            "https://www.bancodebogota.com/servilinea",
+            "https://www.bancodebogota.com/atencion-al-cliente/preguntas-frecuentes/credito-de-vivienda",
+            "https://www.bancodebogota.com/empresas/productos-de-credito/capital-de-trabajo/cupo-rotativo-para-pago"
+          ],
+          "n": 26
+        },
+        {
+          "hash": "7987a95ac8d95befae49d5722568b512",
+          "urls": [
+            "https://www.bancodebogota.com/atencion-al-cliente/canales",
+            "https://www.bancodebogota.com/atencion-al-cliente/canales/"
+          ],
+          "n": 2
+        },
+        {
+          "hash": "87de1621ae71c2e3e3c98bcca5ac7bc2",
+          "urls": [
+            "https://www.bancodebogota.com/empresas/inversion-y-liquidez/fiducias",
+            "https://www.bancodebogota.com/empresas/soluciones-fiduciarias"
+          ],
+          "n": 2
+        },
+        {
+          "hash": "b2c56ae3ec0aecc2569447480b4ec3fe",
+          "urls": [
+            "https://www.bancodebogota.com/empresas/inversion-y-liquidez/fiducias/administracion/pagos",
+            "https://www.bancodebogota.com/empresas/soluciones-fiduciarias/fiducia-de-administracion/administracion-y-pagos"
+          ],
+          "n": 2
+        },
+        {
+          "hash": "4d2a7a784b4146fd081cb7b7b42b98ec",
+          "urls": [
+            "https://www.bancodebogota.com/empresas/portales/instructivo-establecer-alertas",
+            "https://www.bancodebogota.com/empresas/portales/instructivo-transferencias-inversion-desinversion-externas"
+          ],
+          "n": 2
+        },
+        {
+          "hash": "98303d21e13dc813adc024f6e86f28c3",
+          "urls": [
+            "https://www.bancodebogota.com/informe-de-gestion",
+            "https://www.bancodebogota.com/informe-gestion-2024-3"
+          ],
+          "n": 2
+        },
+        {
+          "hash": "b17bc41f01d66ec7375e56218226c8eb",
+          "urls": [
+            "https://www.bancodebogota.com/personas/tarjetas-de-credito/compra-cartera",
+            "https://www.bancodebogota.com/personas/tarjetas-de-credito/compra-cartera?gad_source=1&gad_campaignid=22470271369&gbraid=0AAAAAqCvJkdRdR8x7QfLNDN0nmsf0k-ar"
+          ],
+          "n": 2
+        },
+        {
+          "hash": "e085c49889d157b59cf13f4e57d2a03d",
+          "urls": [
+            "https://www.bancodebogota.com/sostenibilidad/biblioteca",
+            "https://www.bancodebogota.com/sostenibilidad/Biblioteca"
+          ],
+          "n": 2
+        }
+      ]
+    }
+  },
+  "performance": {
+    "slow_threshold_ms": 2000,
+    "n_slow_pages": 0,
+    "n_measured": 899,
+    "avg_ms": 443
+  },
+  "broken_or_errors": 26,
+  "wps_migration": {
+    "total_urls_checked": 674,
+    "migrated_out_of_wps": 201,
+    "still_in_wps_with_redirect": 0,
+    "no_redirect_still_wps": 455,
+    "errors": 18,
+    "migration_percent": 29.82,
+    "by_redirect_type": {
+      "http_3xx": 200,
+      "js": 1,
+      "none": 455,
+      "error": 18
+    }
+  }
+}
