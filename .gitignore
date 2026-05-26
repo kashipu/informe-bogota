@@ -12,9 +12,8 @@ env/
 data/pages.jsonl
 data/edges.jsonl
 data/errors.jsonl
-data/wps_redirects.json
 
-# IMPORTANTE: data/hierarchy.json y nowps/data/hierarchy.json SI se incluyen en Git
+# IMPORTANTE: data/hierarchy.json, nowps/data/hierarchy.json y data/wps_redirects.json SI se incluyen en Git
 
 # Logs
 logs/
