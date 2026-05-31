@@ -20,17 +20,6 @@
       "value": 1
     },
     {
-      "name": "BuscadordePuntosbogota",
-      "pages": 1,
-      "avg_words": 140,
-      "avg_ms": 285,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 1,
-      "seo_issues": 1,
-      "value": 1
-    },
-    {
       "name": "aliados-pyme",
       "pages": 1,
       "avg_words": 260,
@@ -143,61 +132,14 @@
       ]
     },
     {
-      "name": "atenci%C3%B3n-al-cliente",
-      "pages": 1,
-      "avg_words": 140,
-      "avg_ms": 323,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 1,
-      "seo_issues": 1,
-      "children": [
-        {
-          "name": "preguntas-frecuentes",
-          "pages": 1,
-          "avg_words": 140,
-          "avg_ms": 323,
-          "ok": 0,
-          "redirects": 0,
-          "broken": 1,
-          "seo_issues": 1,
-          "children": [
-            {
-              "name": "medios-de-pago",
-              "pages": 1,
-              "avg_words": 140,
-              "avg_ms": 323,
-              "ok": 0,
-              "redirects": 0,
-              "broken": 1,
-              "seo_issues": 1,
-              "children": [
-                {
-                  "name": "datafono-fisico",
-                  "pages": 1,
-                  "avg_words": 140,
-                  "avg_ms": 323,
-                  "ok": 0,
-                  "redirects": 0,
-                  "broken": 1,
-                  "seo_issues": 1,
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "atencion-al-cliente",
-      "pages": 140,
-      "avg_words": 550,
-      "avg_ms": 398,
+      "pages": 138,
+      "avg_words": 556,
+      "avg_ms": 400,
       "ok": 138,
       "redirects": 0,
-      "broken": 2,
-      "seo_issues": 139,
+      "broken": 0,
+      "seo_issues": 137,
       "children": [
         {
           "name": "canales",
@@ -905,13 +847,13 @@
         },
         {
           "name": "preguntas-frecuentes",
-          "pages": 44,
-          "avg_words": 614,
-          "avg_ms": 365,
+          "pages": 43,
+          "avg_words": 625,
+          "avg_ms": 366,
           "ok": 43,
           "redirects": 0,
-          "broken": 1,
-          "seo_issues": 44,
+          "broken": 0,
+          "seo_issues": 43,
           "children": [
             {
               "name": "adelanto-de-nomina",
@@ -998,17 +940,6 @@
               "ok": 1,
               "redirects": 0,
               "broken": 0,
-              "seo_issues": 1,
-              "value": 1
-            },
-            {
-              "name": "credito-de-vivienda",
-              "pages": 1,
-              "avg_words": 140,
-              "avg_ms": 321,
-              "ok": 0,
-              "redirects": 0,
-              "broken": 1,
               "seo_issues": 1,
               "value": 1
             },
@@ -1738,17 +1669,6 @@
           ]
         },
         {
-          "name": "servilinea",
-          "pages": 1,
-          "avg_words": 140,
-          "avg_ms": 282,
-          "ok": 0,
-          "redirects": 0,
-          "broken": 1,
-          "seo_issues": 1,
-          "value": 1
-        },
-        {
           "name": "servilineas",
           "pages": 1,
           "avg_words": 744,
@@ -2190,29 +2110,6 @@
       ]
     },
     {
-      "name": "bienvenida",
-      "pages": 1,
-      "avg_words": 140,
-      "avg_ms": 330,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 1,
-      "seo_issues": 1,
-      "children": [
-        {
-          "name": "credito-libre-inversion",
-          "pages": 1,
-          "avg_words": 140,
-          "avg_ms": 330,
-          "ok": 0,
-          "redirects": 0,
-          "broken": 1,
-          "seo_issues": 1,
-          "value": 1
-        }
-      ]
-    },
-    {
       "name": "bre-b",
       "pages": 2,
       "avg_words": 1145,
@@ -2243,64 +2140,6 @@
       "ok": 1,
       "redirects": 0,
       "broken": 0,
-      "seo_issues": 1,
-      "value": 1
-    },
-    {
-      "name": "cercademi",
-      "pages": 1,
-      "avg_words": 140,
-      "avg_ms": 401,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 1,
-      "seo_issues": 1,
-      "children": [
-        {
-          "name": "colombia",
-          "pages": 1,
-          "avg_words": 140,
-          "avg_ms": 401,
-          "ok": 0,
-          "redirects": 0,
-          "broken": 1,
-          "seo_issues": 1,
-          "children": [
-            {
-              "name": "results-bogota",
-              "pages": 1,
-              "avg_words": 140,
-              "avg_ms": 401,
-              "ok": 0,
-              "redirects": 0,
-              "broken": 1,
-              "seo_issues": 1,
-              "children": [
-                {
-                  "name": "Ver%20Todas",
-                  "pages": 1,
-                  "avg_words": 140,
-                  "avg_ms": 401,
-                  "ok": 0,
-                  "redirects": 0,
-                  "broken": 1,
-                  "seo_issues": 1,
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "consulta-tasas-y-tarifas",
-      "pages": 1,
-      "avg_words": 140,
-      "avg_ms": 340,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 1,
       "seo_issues": 1,
       "value": 1
     },
@@ -2731,13 +2570,13 @@
     },
     {
       "name": "empresas",
-      "pages": 212,
-      "avg_words": 550,
+      "pages": 211,
+      "avg_words": 552,
       "avg_ms": 465,
       "ok": 211,
       "redirects": 0,
-      "broken": 1,
-      "seo_issues": 172,
+      "broken": 0,
+      "seo_issues": 171,
       "children": [
         {
           "name": "bre-b",
@@ -3976,23 +3815,23 @@
         },
         {
           "name": "productos-de-credito",
-          "pages": 31,
-          "avg_words": 448,
-          "avg_ms": 429,
+          "pages": 30,
+          "avg_words": 458,
+          "avg_ms": 431,
           "ok": 30,
           "redirects": 0,
-          "broken": 1,
-          "seo_issues": 31,
+          "broken": 0,
+          "seo_issues": 30,
           "children": [
             {
               "name": "capital-de-trabajo",
-              "pages": 5,
-              "avg_words": 332,
-              "avg_ms": 453,
+              "pages": 4,
+              "avg_words": 380,
+              "avg_ms": 466,
               "ok": 4,
               "redirects": 0,
-              "broken": 1,
-              "seo_issues": 5,
+              "broken": 0,
+              "seo_issues": 4,
               "children": [
                 {
                   "name": "creditos-cartera-ordinaria",
@@ -4013,17 +3852,6 @@
                   "ok": 1,
                   "redirects": 0,
                   "broken": 0,
-                  "seo_issues": 1,
-                  "value": 1
-                },
-                {
-                  "name": "cupo-rotativo-para-pago",
-                  "pages": 1,
-                  "avg_words": 140,
-                  "avg_ms": 398,
-                  "ok": 0,
-                  "redirects": 0,
-                  "broken": 1,
                   "seo_issues": 1,
                   "value": 1
                 },
@@ -5189,13 +5017,13 @@
     },
     {
       "name": "fifa-2026",
-      "pages": 13,
-      "avg_words": 1166,
-      "avg_ms": 537,
+      "pages": 11,
+      "avg_words": 1353,
+      "avg_ms": 576,
       "ok": 11,
       "redirects": 0,
-      "broken": 2,
-      "seo_issues": 12,
+      "broken": 0,
+      "seo_issues": 10,
       "children": [
         {
           "name": "cuanto-cuesta-ir-al-mundial",
@@ -5264,88 +5092,6 @@
           "value": 1
         },
         {
-          "name": "hospitality-packages",
-          "pages": 1,
-          "avg_words": 140,
-          "avg_ms": 336,
-          "ok": 0,
-          "redirects": 0,
-          "broken": 1,
-          "seo_issues": 1,
-          "value": 1
-        },
-        {
-          "name": "https.www.google.com",
-          "pages": 1,
-          "avg_words": 140,
-          "avg_ms": 307,
-          "ok": 0,
-          "redirects": 0,
-          "broken": 1,
-          "seo_issues": 1,
-          "children": [
-            {
-              "name": "maps",
-              "pages": 1,
-              "avg_words": 140,
-              "avg_ms": 307,
-              "ok": 0,
-              "redirects": 0,
-              "broken": 1,
-              "seo_issues": 1,
-              "children": [
-                {
-                  "name": "place",
-                  "pages": 1,
-                  "avg_words": 140,
-                  "avg_ms": 307,
-                  "ok": 0,
-                  "redirects": 0,
-                  "broken": 1,
-                  "seo_issues": 1,
-                  "children": [
-                    {
-                      "name": "AT%26T+Stadium",
-                      "pages": 1,
-                      "avg_words": 140,
-                      "avg_ms": 307,
-                      "ok": 0,
-                      "redirects": 0,
-                      "broken": 1,
-                      "seo_issues": 1,
-                      "children": [
-                        {
-                          "name": "@32.7479966,-97.0959914,17z",
-                          "pages": 1,
-                          "avg_words": 140,
-                          "avg_ms": 307,
-                          "ok": 0,
-                          "redirects": 0,
-                          "broken": 1,
-                          "seo_issues": 1,
-                          "children": [
-                            {
-                              "name": "data=!3m1!4b1!4m6!3m5!1s0x864e7d86c8884727:0x6d1e60e88c6a9df8!8m2!3d32.7479966!4d-97.0934165!16zL20vMGc5djFx",
-                              "pages": 1,
-                              "avg_words": 140,
-                              "avg_ms": 307,
-                              "ok": 0,
-                              "redirects": 0,
-                              "broken": 1,
-                              "seo_issues": 1,
-                              "value": 1
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "preguntas-frecuentes",
           "pages": 1,
           "avg_words": 1887,
@@ -5403,74 +5149,6 @@
       "value": 1
     },
     {
-      "name": "fundacion-banco-de-bogota",
-      "pages": 4,
-      "avg_words": 140,
-      "avg_ms": 360,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 4,
-      "seo_issues": 4,
-      "children": [
-        {
-          "name": "educacion-y-bienestar-social",
-          "pages": 4,
-          "avg_words": 140,
-          "avg_ms": 360,
-          "ok": 0,
-          "redirects": 0,
-          "broken": 4,
-          "seo_issues": 4,
-          "children": [
-            {
-              "name": "alejandro-torres",
-              "pages": 1,
-              "avg_words": 140,
-              "avg_ms": 341,
-              "ok": 0,
-              "redirects": 0,
-              "broken": 1,
-              "seo_issues": 1,
-              "value": 1
-            },
-            {
-              "name": "astrid-sarria",
-              "pages": 1,
-              "avg_words": 140,
-              "avg_ms": 416,
-              "ok": 0,
-              "redirects": 0,
-              "broken": 1,
-              "seo_issues": 1,
-              "value": 1
-            },
-            {
-              "name": "cristian-ropero",
-              "pages": 1,
-              "avg_words": 140,
-              "avg_ms": 355,
-              "ok": 0,
-              "redirects": 0,
-              "broken": 1,
-              "seo_issues": 1,
-              "value": 1
-            },
-            {
-              "name": "paola-monroy",
-              "pages": 1,
-              "avg_words": 140,
-              "avg_ms": 328,
-              "ok": 0,
-              "redirects": 0,
-              "broken": 1,
-              "seo_issues": 1,
-              "value": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "informe-de-gestion",
       "pages": 1,
       "avg_words": 458,
@@ -5511,17 +5189,6 @@
       "ok": 1,
       "redirects": 0,
       "broken": 0,
-      "seo_issues": 1,
-      "value": 1
-    },
-    {
-      "name": "mitrabajo",
-      "pages": 1,
-      "avg_words": 140,
-      "avg_ms": 349,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 1,
       "seo_issues": 1,
       "value": 1
     },
@@ -5618,13 +5285,13 @@
     },
     {
       "name": "personas",
-      "pages": 205,
-      "avg_words": 965,
-      "avg_ms": 477,
+      "pages": 201,
+      "avg_words": 981,
+      "avg_ms": 480,
       "ok": 201,
       "redirects": 0,
-      "broken": 4,
-      "seo_issues": 178,
+      "broken": 0,
+      "seo_issues": 174,
       "children": [
         {
           "name": "beneficios",
@@ -5764,13 +5431,13 @@
         },
         {
           "name": "creditos",
-          "pages": 34,
-          "avg_words": 1108,
-          "avg_ms": 505,
+          "pages": 33,
+          "avg_words": 1137,
+          "avg_ms": 511,
           "ok": 33,
           "redirects": 0,
-          "broken": 1,
-          "seo_issues": 25,
+          "broken": 0,
+          "seo_issues": 24,
           "children": [
             {
               "name": "adelanto-de-nomina",
@@ -6138,29 +5805,6 @@
               "broken": 0,
               "seo_issues": 0,
               "value": 1
-            },
-            {
-              "name": "vivienda",
-              "pages": 1,
-              "avg_words": 140,
-              "avg_ms": 293,
-              "ok": 0,
-              "redirects": 0,
-              "broken": 1,
-              "seo_issues": 1,
-              "children": [
-                {
-                  "name": "vivienda",
-                  "pages": 1,
-                  "avg_words": 140,
-                  "avg_ms": 293,
-                  "ok": 0,
-                  "redirects": 0,
-                  "broken": 1,
-                  "seo_issues": 1,
-                  "value": 1
-                }
-              ]
             }
           ]
         },
@@ -7395,13 +7039,13 @@
         },
         {
           "name": "tarjetas-de-credito",
-          "pages": 46,
-          "avg_words": 1023,
-          "avg_ms": 486,
+          "pages": 44,
+          "avg_words": 1063,
+          "avg_ms": 495,
           "ok": 44,
           "redirects": 0,
-          "broken": 2,
-          "seo_issues": 41,
+          "broken": 0,
+          "seo_issues": 39,
           "children": [
             {
               "name": "aliada",
@@ -7868,113 +7512,8 @@
               "broken": 0,
               "seo_issues": 0,
               "value": 1
-            },
-            {
-              "name": "visa.com.co",
-              "pages": 1,
-              "avg_words": 140,
-              "avg_ms": 294,
-              "ok": 0,
-              "redirects": 0,
-              "broken": 1,
-              "seo_issues": 1,
-              "children": [
-                {
-                  "name": "es_co",
-                  "pages": 1,
-                  "avg_words": 140,
-                  "avg_ms": 294,
-                  "ok": 0,
-                  "redirects": 0,
-                  "broken": 1,
-                  "seo_issues": 1,
-                  "children": [
-                    {
-                      "name": "promociones",
-                      "pages": 1,
-                      "avg_words": 140,
-                      "avg_ms": 294,
-                      "ok": 0,
-                      "redirects": 0,
-                      "broken": 1,
-                      "seo_issues": 1,
-                      "children": [
-                        {
-                          "name": "servicios-medicos-de-emergencia-internacional",
-                          "pages": 1,
-                          "avg_words": 140,
-                          "avg_ms": 294,
-                          "ok": 0,
-                          "redirects": 0,
-                          "broken": 1,
-                          "seo_issues": 1,
-                          "children": [
-                            {
-                              "name": "153027",
-                              "pages": 1,
-                              "avg_words": 140,
-                              "avg_ms": 294,
-                              "ok": 0,
-                              "redirects": 0,
-                              "broken": 1,
-                              "seo_issues": 1,
-                              "value": 1
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "www.viajesbancodebogota.com",
-              "pages": 1,
-              "avg_words": 140,
-              "avg_ms": 296,
-              "ok": 0,
-              "redirects": 0,
-              "broken": 1,
-              "seo_issues": 1,
-              "children": [
-                {
-                  "name": "ofertas-de-viajes",
-                  "pages": 1,
-                  "avg_words": 140,
-                  "avg_ms": 296,
-                  "ok": 0,
-                  "redirects": 0,
-                  "broken": 1,
-                  "seo_issues": 1,
-                  "children": [
-                    {
-                      "name": "fiesta-del-futbol",
-                      "pages": 1,
-                      "avg_words": 140,
-                      "avg_ms": 296,
-                      "ok": 0,
-                      "redirects": 0,
-                      "broken": 1,
-                      "seo_issues": 1,
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
             }
           ]
-        },
-        {
-          "name": "virtual.bancodebogota.com.co",
-          "pages": 1,
-          "avg_words": 140,
-          "avg_ms": 474,
-          "ok": 0,
-          "redirects": 0,
-          "broken": 1,
-          "seo_issues": 1,
-          "value": 1
         }
       ]
     },
@@ -7990,40 +7529,6 @@
       "value": 1
     },
     {
-      "name": "portal",
-      "pages": 1,
-      "avg_words": 140,
-      "avg_ms": 292,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 1,
-      "seo_issues": 1,
-      "children": [
-        {
-          "name": "page",
-          "pages": 1,
-          "avg_words": 140,
-          "avg_ms": 292,
-          "ok": 0,
-          "redirects": 0,
-          "broken": 1,
-          "seo_issues": 1,
-          "value": 1
-        }
-      ]
-    },
-    {
-      "name": "programa-anticorrupcion-antisoborno",
-      "pages": 1,
-      "avg_words": 140,
-      "avg_ms": 273,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 1,
-      "seo_issues": 1,
-      "value": 1
-    },
-    {
       "name": "proyecto-unicef",
       "pages": 1,
       "avg_words": 428,
@@ -8033,98 +7538,6 @@
       "broken": 0,
       "seo_issues": 1,
       "value": 1
-    },
-    {
-      "name": "pymes",
-      "pages": 1,
-      "avg_words": 140,
-      "avg_ms": 375,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 1,
-      "seo_issues": 1,
-      "value": 1
-    },
-    {
-      "name": "seguros",
-      "pages": 1,
-      "avg_words": 140,
-      "avg_ms": 287,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 1,
-      "seo_issues": 1,
-      "children": [
-        {
-          "name": "cuota-protegida-independientes-crediservice",
-          "pages": 1,
-          "avg_words": 140,
-          "avg_ms": 287,
-          "ok": 0,
-          "redirects": 0,
-          "broken": 1,
-          "seo_issues": 1,
-          "value": 1
-        }
-      ]
-    },
-    {
-      "name": "servilinea",
-      "pages": 1,
-      "avg_words": 140,
-      "avg_ms": 344,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 1,
-      "seo_issues": 1,
-      "value": 1
-    },
-    {
-      "name": "sostenibiidad",
-      "pages": 1,
-      "avg_words": 140,
-      "avg_ms": 394,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 1,
-      "seo_issues": 1,
-      "children": [
-        {
-          "name": "fundacion-banco-de-bogota",
-          "pages": 1,
-          "avg_words": 140,
-          "avg_ms": 394,
-          "ok": 0,
-          "redirects": 0,
-          "broken": 1,
-          "seo_issues": 1,
-          "children": [
-            {
-              "name": "educacion-y-bienestar-social",
-              "pages": 1,
-              "avg_words": 140,
-              "avg_ms": 394,
-              "ok": 0,
-              "redirects": 0,
-              "broken": 1,
-              "seo_issues": 1,
-              "children": [
-                {
-                  "name": "paola-monroy",
-                  "pages": 1,
-                  "avg_words": 140,
-                  "avg_ms": 394,
-                  "ok": 0,
-                  "redirects": 0,
-                  "broken": 1,
-                  "seo_issues": 1,
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        }
-      ]
     },
     {
       "name": "sostenibilidad",
@@ -8393,29 +7806,6 @@
       "broken": 0,
       "seo_issues": 1,
       "value": 1
-    },
-    {
-      "name": "tarjetas-de-credito",
-      "pages": 1,
-      "avg_words": 140,
-      "avg_ms": 307,
-      "ok": 0,
-      "redirects": 0,
-      "broken": 1,
-      "seo_issues": 1,
-      "children": [
-        {
-          "name": "economia",
-          "pages": 1,
-          "avg_words": 140,
-          "avg_ms": 307,
-          "ok": 0,
-          "redirects": 0,
-          "broken": 1,
-          "seo_issues": 1,
-          "value": 1
-        }
-      ]
     },
     {
       "name": "tasas-y-tarifas",

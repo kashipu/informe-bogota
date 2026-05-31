@@ -639,8 +639,11 @@ async def crawl_async() -> None:
                 pages_fp.write(json.dumps(asdict(rec), ensure_ascii=False) + "\n")
                 pages_count += 1
                 pbar.update(1)
-                segs = [s for s in urlparse(url).path.split("/") if s]
-                insert_path(hroot, segs)
+                # Solo se incluyen en el árbol las páginas válidas (2xx/3xx).
+                # Las 404 / 4xx / 5xx no deben aparecer en la jerarquía.
+                if resp.status_code is not None and 200 <= resp.status_code < 400:
+                    segs = [s for s in urlparse(url).path.split("/") if s]
+                    insert_path(hroot, segs)
                 for c_url, _, _ in children:
                     edges_fp.write(json.dumps({"source": url, "target": c_url}, ensure_ascii=False) + "\n")
 

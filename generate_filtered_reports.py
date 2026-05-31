@@ -49,6 +49,9 @@ EXCLUDED_PATHS = ["/wps", "/documents", "/s/minisitios", "/s"]
 SKIP_ERROR_PAGES = True
 SKIP_BLOCKED = True
 ONLY_OK_STATUS = False
+# Excluir páginas no válidas (404/4xx/5xx/errores) SOLO del árbol de jerarquía,
+# manteniéndolas en la analítica y en broken_pages.csv.
+TREE_ONLY_OK_STATUS = True
 USE_FINAL_URL = True
 HTML_FILES = ["grahp.html", "icicle.html", "pack.html"]
 BASE_NAME = "www.bancodebogota.com"
@@ -274,12 +277,14 @@ def main() -> None:
             if issues:
                 section_issues[top] += 1
 
-            insert_path(hroot, segs, {
-                "word_count": wc,
-                "response_time_ms": rt,
-                "status_code": sc,
-                "has_seo_issue": bool(issues),
-            })
+            # Solo páginas válidas (2xx/3xx) entran al árbol de jerarquía.
+            if not (TREE_ONLY_OK_STATUS and (sc is None or not (200 <= sc < 400))):
+                insert_path(hroot, segs, {
+                    "word_count": wc,
+                    "response_time_ms": rt,
+                    "status_code": sc,
+                    "has_seo_issue": bool(issues),
+                })
 
             # Recopilar para detección de duplicados / SEO / broken
             title = (rec.get("title") or "").strip()

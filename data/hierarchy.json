@@ -6,10 +6,6 @@
       "value": 2
     },
     {
-      "name": "BuscadordePuntosbogota",
-      "value": 1
-    },
-    {
       "name": "aliados-pyme",
       "value": 1
     },
@@ -50,25 +46,6 @@
             {
               "name": "tigo",
               "value": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "atenci%C3%B3n-al-cliente",
-      "children": [
-        {
-          "name": "preguntas-frecuentes",
-          "children": [
-            {
-              "name": "medios-de-pago",
-              "children": [
-                {
-                  "name": "datafono-fisico",
-                  "value": 1
-                }
-              ]
             }
           ]
         }
@@ -415,10 +392,6 @@
               "value": 1
             },
             {
-              "name": "credito-de-vivienda",
-              "value": 1
-            },
-            {
               "name": "cuatro-por-mil",
               "value": 1
             },
@@ -693,31 +666,8 @@
           ]
         },
         {
-          "name": "servilinea",
-          "value": 1
-        },
-        {
           "name": "servilineas",
           "value": 1
-        }
-      ]
-    },
-    {
-      "name": "atención-al-cliente",
-      "children": [
-        {
-          "name": "preguntas-frecuentes",
-          "children": [
-            {
-              "name": "medios-de-pago",
-              "children": [
-                {
-                  "name": "datafono-fisico",
-                  "value": 1
-                }
-              ]
-            }
-          ]
         }
       ]
     },
@@ -916,15 +866,6 @@
       ]
     },
     {
-      "name": "bienvenida",
-      "children": [
-        {
-          "name": "credito-libre-inversion",
-          "value": 1
-        }
-      ]
-    },
-    {
       "name": "bre-b",
       "children": [
         {
@@ -939,29 +880,6 @@
     },
     {
       "name": "buscador-puntos-de-atencion",
-      "value": 1
-    },
-    {
-      "name": "cercademi",
-      "children": [
-        {
-          "name": "colombia",
-          "children": [
-            {
-              "name": "results-bogota",
-              "children": [
-                {
-                  "name": "Ver%20Todas",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "name": "consulta-tasas-y-tarifas",
       "value": 1
     },
     {
@@ -1991,35 +1909,6 @@
                   "value": 1
                 },
                 {
-                  "name": "proteccion_salud_a_tu_manera_bf7db4f7c0https:",
-                  "children": [
-                    {
-                      "name": "www.bancodebogota.com",
-                      "children": [
-                        {
-                          "name": "documents",
-                          "children": [
-                            {
-                              "name": "d",
-                              "children": [
-                                {
-                                  "name": "guest",
-                                  "children": [
-                                    {
-                                      "name": "proteccion_salud_a_tu_manera_bf7db4f7c0",
-                                      "value": 1
-                                    }
-                                  ]
-                                }
-                              ]
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
                   "name": "proteccion_vida_a_tu_manera_99457127b8-1",
                   "value": 1
                 },
@@ -2975,10 +2864,6 @@
                   "value": 1
                 },
                 {
-                  "name": "cupo-rotativo-para-pago",
-                  "value": 1
-                },
-                {
                   "name": "cupo-rotativo-para-pagos",
                   "value": 1
                 }
@@ -3513,39 +3398,6 @@
           "value": 1
         },
         {
-          "name": "hospitality-packages",
-          "value": 1
-        },
-        {
-          "name": "https.www.google.com",
-          "children": [
-            {
-              "name": "maps",
-              "children": [
-                {
-                  "name": "place",
-                  "children": [
-                    {
-                      "name": "AT%26T+Stadium",
-                      "children": [
-                        {
-                          "name": "@32.7479966,-97.0959914,17z",
-                          "children": [
-                            {
-                              "name": "data=!3m1!4b1!4m6!3m5!1s0x864e7d86c8884727:0x6d1e60e88c6a9df8!8m2!3d32.7479966!4d-97.0934165!16zL20vMGc5djFx",
-                              "value": 1
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "name": "preguntas-frecuentes",
           "value": 1
         },
@@ -3568,32 +3420,6 @@
       "value": 1
     },
     {
-      "name": "fundacion-banco-de-bogota",
-      "children": [
-        {
-          "name": "educacion-y-bienestar-social",
-          "children": [
-            {
-              "name": "alejandro-torres",
-              "value": 1
-            },
-            {
-              "name": "astrid-sarria",
-              "value": 1
-            },
-            {
-              "name": "cristian-ropero",
-              "value": 1
-            },
-            {
-              "name": "paola-monroy",
-              "value": 1
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "informe-de-gestion",
       "value": 1
     },
@@ -3607,10 +3433,6 @@
     },
     {
       "name": "management-report-2024",
-      "value": 1
-    },
-    {
-      "name": "mitrabajo",
       "value": 1
     },
     {
@@ -3949,10 +3771,6 @@
               "children": [
                 {
                   "name": "compra-cartera",
-                  "value": 1
-                },
-                {
-                  "name": "vivienda",
                   "value": 1
                 },
                 {
@@ -4610,50 +4428,8 @@
             {
               "name": "tc-anderson",
               "value": 1
-            },
-            {
-              "name": "visa.com.co",
-              "children": [
-                {
-                  "name": "es_co",
-                  "children": [
-                    {
-                      "name": "promociones",
-                      "children": [
-                        {
-                          "name": "servicios-medicos-de-emergencia-internacional",
-                          "children": [
-                            {
-                              "name": "153027",
-                              "value": 1
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "name": "www.viajesbancodebogota.com",
-              "children": [
-                {
-                  "name": "ofertas-de-viajes",
-                  "children": [
-                    {
-                      "name": "fiesta-del-futbol",
-                      "value": 1
-                    }
-                  ]
-                }
-              ]
             }
           ]
-        },
-        {
-          "name": "virtual.bancodebogota.com.co",
-          "value": 1
         },
         {
           "name": "vivienda",
@@ -4671,24 +4447,7 @@
       "value": 1
     },
     {
-      "name": "portal",
-      "children": [
-        {
-          "name": "page",
-          "value": 1
-        }
-      ]
-    },
-    {
-      "name": "programa-anticorrupcion-antisoborno",
-      "value": 1
-    },
-    {
       "name": "proyecto-unicef",
-      "value": 1
-    },
-    {
-      "name": "pymes",
       "value": 1
     },
     {
@@ -4717,15 +4476,6 @@
                     },
                     {
                       "name": "noticias.html",
-                      "value": 1
-                    }
-                  ]
-                },
-                {
-                  "name": "activa-tu-tarjeta",
-                  "children": [
-                    {
-                      "name": "index.html",
                       "value": 1
                     }
                   ]
@@ -4787,20 +4537,6 @@
                   ]
                 },
                 {
-                  "name": "reglamentos",
-                  "children": [
-                    {
-                      "name": "movistar",
-                      "children": [
-                        {
-                          "name": "www.movistar.co",
-                          "value": 1
-                        }
-                      ]
-                    }
-                  ]
-                },
-                {
                   "name": "te-escuchamos",
                   "children": [
                     {
@@ -4835,24 +4571,6 @@
                       "value": 1
                     },
                     {
-                      "name": "reglamento-tc-biomax",
-                      "children": [
-                        {
-                          "name": "concierge.esp@visadigitalconcierge.com",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "name": "temporada-de-nomina",
-                      "children": [
-                        {
-                          "name": "index.html",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
                       "name": "tigo-0-porciento-interes",
                       "children": [
                         {
@@ -4870,15 +4588,6 @@
         {
           "name": "minisitios",
           "children": [
-            {
-              "name": "alianzas-web",
-              "children": [
-                {
-                  "name": "promociones.html",
-                  "value": 1
-                }
-              ]
-            },
             {
               "name": "canales",
               "children": [
@@ -4943,10 +4652,6 @@
                   "value": 1
                 }
               ]
-            },
-            {
-              "name": "sostenibilidad",
-              "value": 1
             },
             {
               "name": "tarifas-en-moneda-extranjera-2021-2022",
@@ -5537,38 +5242,6 @@
       ]
     },
     {
-      "name": "seguros",
-      "children": [
-        {
-          "name": "cuota-protegida-independientes-crediservice",
-          "value": 1
-        }
-      ]
-    },
-    {
-      "name": "servilinea",
-      "value": 1
-    },
-    {
-      "name": "sostenibiidad",
-      "children": [
-        {
-          "name": "fundacion-banco-de-bogota",
-          "children": [
-            {
-              "name": "educacion-y-bienestar-social",
-              "children": [
-                {
-                  "name": "paola-monroy",
-                  "value": 1
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
       "name": "sostenibilidad",
       "children": [
         {
@@ -5667,15 +5340,6 @@
     {
       "name": "tag-aval",
       "value": 1
-    },
-    {
-      "name": "tarjetas-de-credito",
-      "children": [
-        {
-          "name": "economia",
-          "value": 1
-        }
-      ]
     },
     {
       "name": "tasas-y-tarifas",
@@ -9027,15 +8691,6 @@
                           ]
                         },
                         {
-                          "name": "activa-tu-tarjeta",
-                          "children": [
-                            {
-                              "name": "index.html",
-                              "value": 1
-                            }
-                          ]
-                        },
-                        {
                           "name": "asistencias-tarjetas",
                           "children": [
                             {
@@ -9298,15 +8953,6 @@
                               ]
                             },
                             {
-                              "name": "temporada-de-nomina",
-                              "children": [
-                                {
-                                  "name": "index.html",
-                                  "value": 1
-                                }
-                              ]
-                            },
-                            {
                               "name": "transfiya",
                               "children": [
                                 {
@@ -9389,15 +9035,6 @@
                         },
                         {
                           "name": "turismo.html",
-                          "value": 1
-                        }
-                      ]
-                    },
-                    {
-                      "name": "alianzas-web",
-                      "children": [
-                        {
-                          "name": "promociones.html",
                           "value": 1
                         }
                       ]
