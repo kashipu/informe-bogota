@@ -1,0 +1,26 @@
+---
+import DashboardLayout from '../../layouts/DashboardLayout.astro';
+import ReportCard from '../../components/ui/ReportCard.astro';
+import Section from '../../components/ui/Section.astro';
+---
+<DashboardLayout title="Reportes Filtrados — Sin /wps">
+  <div class="max-w-6xl mx-auto py-10 px-5">
+    <a href="/" class="inline-block mb-6 text-white bg-white/20 px-5 py-2 rounded-lg text-sm hover:bg-white/30 no-underline">← Volver al Inicio</a>
+
+    <Section title="📋 Datos accionables">
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5">
+        <ReportCard href="/redirects" title="🔁 Redirecciones /wps" description="Tabla origen → destino" />
+        <ReportCard href="/insights" title="🔍 Insights del sitio" description="SEO, performance, duplicados" />
+      </div>
+    </Section>
+
+    <Section title="✨ Visualizaciones Filtradas">
+      <p class="text-gray-500 mb-4">Sin URLs de: /wps, /documents, /s, /s/minisitios</p>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5">
+        <ReportCard href="/nowps/grafico" title="🌳 Vista de Árbol" description="Estructura jerárquica navegable" />
+        <ReportCard href="/nowps/icicle" title="📊 Vista de Jerarquía" description="Visualización tipo icicle" />
+        <ReportCard href="/nowps/pack" title="⭕ Vista de Concentración" description="Circle packing" />
+      </div>
+    </Section>
+  </div>
+</DashboardLayout>

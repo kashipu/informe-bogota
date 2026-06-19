@@ -1,0 +1,7 @@
+---
+import ChartLayout from '../layouts/ChartLayout.astro';
+import GraphChart from '../components/charts/GraphChart.astro';
+---
+<ChartLayout title="Vista de Árbol — Arquitectura del Sitio" activeChart="grafico">
+  <GraphChart dataPath="/data/hierarchy.json" />
+</ChartLayout>

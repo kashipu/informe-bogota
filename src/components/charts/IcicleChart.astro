@@ -1,0 +1,75 @@
+---
+interface Props { dataPath: string; }
+const { dataPath } = Astro.props;
+---
+<div id="icicle-chart" style="width:100vw;height:calc(100vh - 74px)"></div>
+<div class="tooltip" id="tooltip"></div>
+
+<style>
+  rect { cursor: pointer; }
+  text { pointer-events: none; fill: #fff; font: 10px sans-serif; text-shadow: 0 1px 0 #000, 1px 0 0 #000, -1px 0 0 #000, 0 -1px 0 #000; }
+  .tooltip {
+    position: absolute;
+    padding: 8px;
+    font: 12px sans-serif;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s;
+  }
+</style>
+
+<script define:vars={{ dataPath }}>
+const container = document.getElementById('icicle-chart');
+const width = container.clientWidth;
+const height = container.clientHeight;
+const color = d3.scaleOrdinal(d3.schemeTableau10);
+const tooltip = d3.select('#tooltip');
+
+d3.json(dataPath).then(data => {
+  const root = d3.hierarchy(data).sum(d => d.value).sort((a, b) => b.height - a.height || b.value - a.value);
+  d3.partition().size([height, (root.height + 1) * width / 3])(root);
+
+  let focus = root;
+
+  const svg = d3.select('#icicle-chart').append('svg')
+    .attr('viewBox', [0, 0, width, height]).style('font', '10px sans-serif');
+
+  const cell = svg.selectAll('g').data(root.descendants()).join('g')
+    .attr('transform', d => `translate(${d.y0},${d.x0})`);
+
+  const rect = cell.append('rect')
+    .attr('width', d => d.y1 - d.y0 - 1).attr('height', d => d.x1 - d.x0 - 1)
+    .attr('fill-opacity', 0.8)
+    .attr('fill', d => { if (!d.depth) return '#ccc'; let e = d; while (e.depth > 1) e = e.parent; return color(e.data.name); })
+    .on('click', (event, p) => clicked(p));
+
+  const text = cell.append('text').attr('x', 4).attr('y', 13)
+    .attr('fill-opacity', d => +labelVisible(d));
+  text.append('tspan').text(d => d.data.name);
+
+  cell.on('mouseover', (event, d) => {
+    tooltip.transition().style('opacity', .9);
+    tooltip.html(`<strong>${d.data.name}</strong><br/>Páginas: ${d.value || 0}`)
+      .style('left', (event.pageX + 10) + 'px').style('top', (event.pageY - 28) + 'px');
+  }).on('mouseout', () => tooltip.transition().style('opacity', 0));
+
+  function clicked(p) {
+    focus = focus === p ? p = p.parent : p;
+    root.each(d => d.target = {
+      x0: (d.x0 - p.x0) / (p.x1 - p.x0) * height,
+      x1: (d.x1 - p.x0) / (p.x1 - p.x0) * height,
+      y0: d.y0 - p.y0, y1: d.y1 - p.y0,
+    });
+    const t = cell.transition().duration(750).attr('transform', d => `translate(${d.target.y0},${d.target.x0})`);
+    rect.transition(t).attr('height', d => d.target.x1 - d.target.x0 - 1);
+    text.transition(t).attr('fill-opacity', d => +labelVisible(d.target));
+  }
+
+  function labelVisible(d) { return d.y1 - d.y0 > 16; }
+}).catch(error => {
+  container.innerHTML = `<p style="padding:2rem">Error cargando <code>${dataPath}</code>: ${error}</p>`;
+});
+</script>

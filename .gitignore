@@ -37,3 +37,11 @@ desktop.ini
 
 # Vercel
 .vercel
+node_modules
+
+# Astro build
+dist/
+.astro/
+
+# Tools
+.serena/

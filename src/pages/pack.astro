@@ -1,0 +1,7 @@
+---
+import ChartLayout from '../layouts/ChartLayout.astro';
+import PackChart from '../components/charts/PackChart.astro';
+---
+<ChartLayout title="Vista de Concentración — Arquitectura del Sitio" activeChart="pack">
+  <PackChart dataPath="/data/hierarchy.json" />
+</ChartLayout>

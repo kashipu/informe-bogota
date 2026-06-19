@@ -1,0 +1,7 @@
+---
+import ChartLayout from '../../layouts/ChartLayout.astro';
+import IcicleChart from '../../components/charts/IcicleChart.astro';
+---
+<ChartLayout title="Vista de Jerarquía — Filtrado" activeChart="icicle" prefix="nowps/">
+  <IcicleChart dataPath="/nowps/data/hierarchy.json" />
+</ChartLayout>

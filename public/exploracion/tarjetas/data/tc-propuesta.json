@@ -1,0 +1,761 @@
+{
+  "name": "Tarjetas de Crédito — Propuesta",
+  "tipo": "root",
+  "children": [
+    {
+      "name": "/personas/tarjetas-de-credito",
+      "tipo": "hub",
+      "nota": "Hub comparador unificado — un modelo mental claro para el usuario",
+      "children": [
+        {
+          "name": "tarjetas-propias",
+          "tipo": "grupo",
+          "children": [
+            {
+              "name": "clasica",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                {
+                  "name": "gestiona-tu-tarjeta",
+                  "tipo": "gestion",
+                  "children": [
+                    { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                    { "name": "bloquear-por-perdida", "tipo": "instructivo" },
+                    { "name": "cambiar-fecha-de-pago", "tipo": "instructivo" },
+                    { "name": "congelar-tarjeta", "tipo": "instructivo" }
+                  ]
+                },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "economia",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                {
+                  "name": "gestiona-tu-tarjeta",
+                  "tipo": "gestion",
+                  "children": [
+                    { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                    { "name": "bloquear-por-perdida", "tipo": "instructivo" },
+                    { "name": "cambiar-fecha-de-pago", "tipo": "instructivo" }
+                  ]
+                },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "masivo",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                {
+                  "name": "gestiona-tu-tarjeta",
+                  "tipo": "gestion",
+                  "children": [
+                    { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                    { "name": "bloquear-por-perdida", "tipo": "instructivo" },
+                    { "name": "cambiar-fecha-de-pago", "tipo": "instructivo" }
+                  ]
+                },
+                {
+                  "name": "campanas",
+                  "tipo": "campana",
+                  "children": [
+                    { "name": "mundial-fifa", "tipo": "campana" }
+                  ]
+                },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "gold",
+              "tipo": "producto",
+              "children": [
+                {
+                  "name": "beneficios",
+                  "tipo": "beneficios",
+                  "children": [
+                    { "name": "salas-vip-mastercard", "tipo": "beneficio" },
+                    { "name": "asistencias-en-viaje", "tipo": "beneficio" }
+                  ]
+                },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                {
+                  "name": "gestiona-tu-tarjeta",
+                  "tipo": "gestion",
+                  "children": [
+                    { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                    { "name": "bloquear-por-perdida", "tipo": "instructivo" },
+                    { "name": "cambiar-fecha-de-pago", "tipo": "instructivo" },
+                    { "name": "diferido-automatico", "tipo": "instructivo" },
+                    { "name": "refinanciar-deuda", "tipo": "instructivo" }
+                  ]
+                },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "platinum",
+              "tipo": "producto",
+              "children": [
+                {
+                  "name": "beneficios",
+                  "tipo": "beneficios",
+                  "children": [
+                    { "name": "salas-vip-mastercard", "tipo": "beneficio" }
+                  ]
+                },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                {
+                  "name": "gestiona-tu-tarjeta",
+                  "tipo": "gestion",
+                  "children": [
+                    { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                    { "name": "bloquear-por-perdida", "tipo": "instructivo" },
+                    { "name": "cambiar-fecha-de-pago", "tipo": "instructivo" },
+                    { "name": "diferido-automatico", "tipo": "instructivo" }
+                  ]
+                },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "premium",
+              "tipo": "producto",
+              "nota": "Hub — presenta Mastercard y Visa como dos variantes del mismo producto",
+              "children": [
+                {
+                  "name": "mastercard",
+                  "tipo": "variante",
+                  "children": [
+                    {
+                      "name": "beneficios",
+                      "tipo": "beneficios",
+                      "children": [
+                        { "name": "salas-vip-mastercard", "tipo": "beneficio" }
+                      ]
+                    },
+                    { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    {
+                      "name": "gestiona-tu-tarjeta",
+                      "tipo": "gestion",
+                      "children": [
+                        { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                        { "name": "bloquear-por-perdida", "tipo": "instructivo" },
+                        { "name": "cambiar-fecha-de-pago", "tipo": "instructivo" }
+                      ]
+                    },
+                    { "name": "preguntas-frecuentes", "tipo": "faq" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                },
+                {
+                  "name": "visa",
+                  "tipo": "variante",
+                  "children": [
+                    {
+                      "name": "beneficios",
+                      "tipo": "beneficios",
+                      "children": [
+                        { "name": "visa-airport-companion", "tipo": "beneficio" }
+                      ]
+                    },
+                    { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    {
+                      "name": "gestiona-tu-tarjeta",
+                      "tipo": "gestion",
+                      "children": [
+                        { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                        { "name": "bloquear-por-perdida", "tipo": "instructivo" },
+                        { "name": "cambiar-fecha-de-pago", "tipo": "instructivo" }
+                      ]
+                    },
+                    { "name": "preguntas-frecuentes", "tipo": "faq" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "infinite",
+              "tipo": "producto",
+              "children": [
+                {
+                  "name": "beneficios",
+                  "tipo": "beneficios",
+                  "children": [
+                    { "name": "visa-airport-companion", "tipo": "beneficio" },
+                    { "name": "concierge", "tipo": "beneficio" },
+                    { "name": "asistencias-globales", "tipo": "beneficio" }
+                  ]
+                },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                {
+                  "name": "gestiona-tu-tarjeta",
+                  "tipo": "gestion",
+                  "children": [
+                    { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                    { "name": "bloquear-por-perdida", "tipo": "instructivo" },
+                    { "name": "cambiar-fecha-de-pago", "tipo": "instructivo" },
+                    { "name": "diferido-automatico", "tipo": "instructivo" },
+                    { "name": "refinanciar-deuda", "tipo": "instructivo" }
+                  ]
+                },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "signature",
+              "tipo": "producto",
+              "children": [
+                {
+                  "name": "beneficios",
+                  "tipo": "beneficios",
+                  "children": [
+                    { "name": "visa-airport-companion", "tipo": "beneficio" },
+                    { "name": "concierge", "tipo": "beneficio" }
+                  ]
+                },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                {
+                  "name": "gestiona-tu-tarjeta",
+                  "tipo": "gestion",
+                  "children": [
+                    { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                    { "name": "bloquear-por-perdida", "tipo": "instructivo" },
+                    { "name": "cambiar-fecha-de-pago", "tipo": "instructivo" }
+                  ]
+                },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "black",
+              "tipo": "producto",
+              "nota": "Renombrado desde /black-master — slug más limpio",
+              "children": [
+                {
+                  "name": "beneficios",
+                  "tipo": "beneficios",
+                  "children": [
+                    { "name": "salas-vip-mastercard", "tipo": "beneficio" },
+                    { "name": "concierge", "tipo": "beneficio" }
+                  ]
+                },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                {
+                  "name": "gestiona-tu-tarjeta",
+                  "tipo": "gestion",
+                  "children": [
+                    { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                    { "name": "bloquear-por-perdida", "tipo": "instructivo" },
+                    { "name": "cambiar-fecha-de-pago", "tipo": "instructivo" }
+                  ]
+                },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "on",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                {
+                  "name": "gestiona-tu-tarjeta",
+                  "tipo": "gestion",
+                  "children": [
+                    { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                    { "name": "bloquear-por-perdida", "tipo": "instructivo" },
+                    { "name": "cambiar-fecha-de-pago", "tipo": "instructivo" },
+                    { "name": "diferido-automatico", "tipo": "instructivo" }
+                  ]
+                },
+                {
+                  "name": "campanas",
+                  "tipo": "campana",
+                  "children": [
+                    { "name": "on-al-natural", "tipo": "campana" }
+                  ]
+                },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc", "nota": "← de: /tyc/2025-reglamento-y-beneficios-tc-on" }
+              ]
+            },
+            {
+              "name": "amparada",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios", "nota": "Cobertura del seguro de desempleo" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                {
+                  "name": "gestiona-tu-tarjeta",
+                  "tipo": "gestion",
+                  "children": [
+                    { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                    { "name": "bloquear-por-perdida", "tipo": "instructivo" }
+                  ]
+                },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "alianzas",
+          "tipo": "hub",
+          "nota": "Hub único para todas las alianzas — elimina la sección /alianzas/ global",
+          "children": [
+            {
+              "name": "movistar",
+              "tipo": "hub",
+              "nota": "Hub alianza Movistar — consolida 5 URLs actuales",
+              "children": [
+                {
+                  "name": "clasica",
+                  "tipo": "alianza",
+                  "children": [
+                    { "name": "beneficios", "tipo": "beneficios" },
+                    { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    {
+                      "name": "gestiona-tu-tarjeta",
+                      "tipo": "gestion",
+                      "children": [
+                        { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                        { "name": "bloquear-por-perdida", "tipo": "instructivo" }
+                      ]
+                    },
+                    { "name": "preguntas-frecuentes", "tipo": "faq" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                },
+                {
+                  "name": "gold",
+                  "tipo": "alianza",
+                  "children": [
+                    { "name": "beneficios", "tipo": "beneficios" },
+                    { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    {
+                      "name": "gestiona-tu-tarjeta",
+                      "tipo": "gestion",
+                      "children": [
+                        { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                        { "name": "bloquear-por-perdida", "tipo": "instructivo" }
+                      ]
+                    },
+                    { "name": "preguntas-frecuentes", "tipo": "faq" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                },
+                {
+                  "name": "platinum",
+                  "tipo": "alianza",
+                  "children": [
+                    { "name": "beneficios", "tipo": "beneficios" },
+                    { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    {
+                      "name": "gestiona-tu-tarjeta",
+                      "tipo": "gestion",
+                      "children": [
+                        { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                        { "name": "bloquear-por-perdida", "tipo": "instructivo" }
+                      ]
+                    },
+                    { "name": "preguntas-frecuentes", "tipo": "faq" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "biomax",
+              "tipo": "hub",
+              "nota": "Hub alianza Biomax — consolida 2 slugs compuestos",
+              "children": [
+                {
+                  "name": "clasica",
+                  "tipo": "alianza",
+                  "children": [
+                    { "name": "beneficios", "tipo": "beneficios" },
+                    { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    { "name": "preguntas-frecuentes", "tipo": "faq" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                },
+                {
+                  "name": "gold",
+                  "tipo": "alianza",
+                  "children": [
+                    { "name": "beneficios", "tipo": "beneficios" },
+                    { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    { "name": "preguntas-frecuentes", "tipo": "faq" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "latam-pass",
+              "tipo": "hub",
+              "nota": "Hub alianza Latam Pass — consolida 5 URLs (tarjetas-latam + 4 slugs compuestos)",
+              "children": [
+                {
+                  "name": "clasica",
+                  "tipo": "alianza",
+                  "children": [
+                    { "name": "beneficios", "tipo": "beneficios" },
+                    { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    { "name": "preguntas-frecuentes", "tipo": "faq" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                },
+                {
+                  "name": "gold",
+                  "tipo": "alianza",
+                  "children": [
+                    { "name": "beneficios", "tipo": "beneficios" },
+                    { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    { "name": "preguntas-frecuentes", "tipo": "faq" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                },
+                {
+                  "name": "platinum",
+                  "tipo": "alianza",
+                  "children": [
+                    { "name": "beneficios", "tipo": "beneficios" },
+                    { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    { "name": "preguntas-frecuentes", "tipo": "faq" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                },
+                {
+                  "name": "signature",
+                  "tipo": "alianza",
+                  "children": [
+                    { "name": "beneficios", "tipo": "beneficios" },
+                    { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    { "name": "preguntas-frecuentes", "tipo": "faq" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "claro",
+              "tipo": "alianza",
+              "nota": "← de: /alianzas/tarjeta-de-credito/claro",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "tigo",
+              "tipo": "alianza",
+              "nota": "← de: /alianzas/tarjeta-de-credito/tigo",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "decathlon",
+              "tipo": "alianza",
+              "nota": "← de: /alianzas/tarjeta-de-credito/decathlon",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "mercado-libre",
+              "tipo": "alianza",
+              "nota": "← de: /alianzas/tarjeta-de-credito/mercado-libre",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "convenios",
+          "tipo": "hub",
+          "children": [
+            {
+              "name": "anderson",
+              "tipo": "convenio",
+              "nota": "← de: /tc-anderson",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "gestionar",
+          "tipo": "gestion",
+          "nota": "Hub de operativa general — válido para todas las tarjetas",
+          "children": [
+            { "name": "avances", "tipo": "operativa" },
+            { "name": "compra-cartera", "tipo": "operativa" },
+            { "name": "alivios", "tipo": "operativa" },
+            { "name": "cerorollo", "tipo": "operativa" },
+            { "name": "instacupo", "tipo": "operativa" },
+            { "name": "pago-impuestos", "tipo": "operativa" },
+            { "name": "pago-minimo-alterno", "tipo": "operativa" }
+          ]
+        },
+        {
+          "name": "campanas",
+          "tipo": "campana",
+          "nota": "Campañas efímeras del portafolio general",
+          "children": [
+            { "name": "black-week", "tipo": "campana" },
+            { "name": "amor-y-amistad", "tipo": "campana" },
+            { "name": "halloween", "tipo": "campana" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "/empresas/tarjetas",
+      "tipo": "hub",
+      "nota": "Hub unificado — fusiona /empresas/tarjetas-de-credito/ y /empresas/tarjetas-debito/",
+      "children": [
+        {
+          "name": "credito",
+          "tipo": "hub",
+          "children": [
+            {
+              "name": "negocios",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                {
+                  "name": "gestiona-tu-tarjeta",
+                  "tipo": "gestion",
+                  "children": [
+                    { "name": "activa-tu-tarjeta", "tipo": "instructivo" },
+                    { "name": "bloquear-por-perdida", "tipo": "instructivo" }
+                  ]
+                },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "negocios-elite",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "corporativa",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "compras-institucionales",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "destinos",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "latam-business",
+              "tipo": "alianza",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                { "name": "preguntas-frecuentes", "tipo": "faq" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "visa-distribucion",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "microempresas",
+              "tipo": "hub",
+              "nota": "Portafolio Crecer y Logros — diferencia explícita entre crédito y débito",
+              "children": [
+                {
+                  "name": "crecer",
+                  "tipo": "producto",
+                  "nota": "TC Crecer — diferenciado claramente del TD Crecer",
+                  "children": [
+                    { "name": "beneficios", "tipo": "beneficios" },
+                    { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    { "name": "preguntas-frecuentes", "tipo": "faq" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                },
+                {
+                  "name": "logros",
+                  "tipo": "producto",
+                  "nota": "TC Logros — diferenciado claramente del TD Logros",
+                  "children": [
+                    { "name": "beneficios", "tipo": "beneficios" },
+                    { "name": "tasas-y-tarifas", "tipo": "tasas" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    { "name": "preguntas-frecuentes", "tipo": "faq" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "debito",
+          "tipo": "hub",
+          "children": [
+            {
+              "name": "negocios",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "afinidad",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "cedula-cafetera",
+              "tipo": "producto",
+              "children": [
+                { "name": "beneficios", "tipo": "beneficios" },
+                { "name": "como-solicitarla", "tipo": "adquisicion" },
+                { "name": "terminos-y-condiciones", "tipo": "tyc" }
+              ]
+            },
+            {
+              "name": "microempresas",
+              "tipo": "hub",
+              "children": [
+                {
+                  "name": "crecer",
+                  "tipo": "producto",
+                  "nota": "TD Crecer — diferenciado del TC Crecer",
+                  "children": [
+                    { "name": "beneficios", "tipo": "beneficios" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                },
+                {
+                  "name": "logros",
+                  "tipo": "producto",
+                  "nota": "TD Logros — diferenciado del TC Logros",
+                  "children": [
+                    { "name": "beneficios", "tipo": "beneficios" },
+                    { "name": "como-solicitarla", "tipo": "adquisicion" },
+                    { "name": "terminos-y-condiciones", "tipo": "tyc" }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

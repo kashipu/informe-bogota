@@ -1,0 +1,250 @@
+{
+  "name": "Tarjetas de Crédito — Estado Actual",
+  "tipo": "root",
+  "children": [
+    {
+      "name": "/personas/tarjetas-de-credito",
+      "tipo": "hub",
+      "nota": "Hub principal — 36 hijos directos mezclando productos, funciones y campañas",
+      "children": [
+        {
+          "name": "Tarjetas propias",
+          "tipo": "grupo",
+          "children": [
+            {
+              "name": "clasica",
+              "tipo": "producto",
+              "children": [
+                { "name": "vtu", "tipo": "problema", "nota": "⚠ Slug interno expuesto — 164 palabras (thin content)" }
+              ]
+            },
+            { "name": "economia", "tipo": "producto" },
+            { "name": "masivo", "tipo": "producto" },
+            { "name": "gold", "tipo": "producto" },
+            { "name": "platinum", "tipo": "producto" },
+            {
+              "name": "premium",
+              "tipo": "producto",
+              "nota": "⚠ Único producto con bifurcación por red de pago",
+              "children": [
+                { "name": "master", "tipo": "variante", "nota": "Debería ser /mastercard" },
+                { "name": "visa", "tipo": "variante" }
+              ]
+            },
+            { "name": "infinite", "tipo": "producto" },
+            { "name": "signature", "tipo": "producto" },
+            { "name": "black-master", "tipo": "producto", "nota": "⚠ Slug incompleto — falta identificar como Mastercard" },
+            { "name": "on", "tipo": "producto" },
+            { "name": "amparada", "tipo": "producto" },
+            {
+              "name": "aliada",
+              "tipo": "producto",
+              "children": [
+                { "name": "vtu", "tipo": "problema", "nota": "⚠ Slug interno expuesto — 163 palabras (thin content)" }
+              ]
+            },
+            { "name": "tc-anderson", "tipo": "convenio", "nota": "⚠ Slug técnico interno (debería ser /convenio-anderson)" }
+          ]
+        },
+        {
+          "name": "Alianzas cobranded",
+          "tipo": "grupo",
+          "nota": "⚠ Estructura inconsistente — cada alianza resolvió su URL de forma distinta",
+          "children": [
+            { "name": "biomax-clasica", "tipo": "alianza", "nota": "⚠ Slug compuesto — no hay hub /biomax/" },
+            { "name": "biomax-gold", "tipo": "alianza", "nota": "⚠ Slug compuesto — no hay hub /biomax/" },
+            {
+              "name": "movistar",
+              "tipo": "alianza",
+              "nota": "Hub de Movistar — pero también existe en /alianzas/tarjeta-de-credito/movistar-alianza",
+              "children": [
+                { "name": "movistar-clasica", "tipo": "alianza", "nota": "⚠ Debería estar anidada bajo /movistar/" },
+                { "name": "movistar-gold", "tipo": "alianza", "nota": "⚠ Debería estar anidada bajo /movistar/" },
+                { "name": "movistar-platinum", "tipo": "alianza", "nota": "⚠ Debería estar anidada bajo /movistar/" }
+              ]
+            },
+            { "name": "tarjetas-latam", "tipo": "alianza", "nota": "Hub de Latam — nombre genérico poco descriptivo" },
+            { "name": "clasica-latam-pass", "tipo": "alianza", "nota": "⚠ Slug compuesto — debería anidarse bajo /latam-pass/" },
+            { "name": "gold-latam-pass", "tipo": "alianza", "nota": "⚠ Slug compuesto" },
+            { "name": "platinum-latam-pass", "tipo": "alianza", "nota": "⚠ Slug compuesto" },
+            { "name": "signature-latam-pass", "tipo": "alianza", "nota": "⚠ Slug compuesto" }
+          ]
+        },
+        {
+          "name": "Páginas funcionales (mezcladas con productos)",
+          "tipo": "grupo",
+          "nota": "⚠ 10 páginas de operativa y 1 campaña al mismo nivel que los productos",
+          "children": [
+            { "name": "avances", "tipo": "operativa" },
+            { "name": "alivios", "tipo": "operativa" },
+            { "name": "compra-cartera", "tipo": "operativa" },
+            { "name": "cerorollo", "tipo": "operativa" },
+            { "name": "instacupo", "tipo": "operativa" },
+            { "name": "pago-impuestos", "tipo": "operativa" },
+            { "name": "pago-minimo-alterno", "tipo": "operativa" },
+            { "name": "cuota-de-manejo", "tipo": "operativa" },
+            { "name": "sin-cuota-de-manejo", "tipo": "operativa" },
+            { "name": "black-week", "tipo": "campana", "nota": "⚠ Campaña temporal al mismo nivel que productos permanentes" }
+          ]
+        },
+        {
+          "name": "Asistencias y tasas (parciales)",
+          "tipo": "grupo",
+          "nota": "⚠ Beneficios solo documentados para 2 tarjetas — el resto no tiene página de beneficios",
+          "children": [
+            {
+              "name": "asistencias",
+              "tipo": "beneficios",
+              "children": [
+                { "name": "salas-vip-tc-black-mastercard", "tipo": "beneficio", "nota": "Solo para Black" },
+                { "name": "visa-airport-companion", "tipo": "beneficio", "nota": "Solo para Visa premium" }
+              ]
+            },
+            { "name": "tasas-de-interes", "tipo": "tasas", "nota": "⚠ Una sola tabla para todas las tarjetas — no por producto" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "/alianzas/tarjeta-de-credito",
+      "tipo": "hub",
+      "nota": "⚠ SECCIÓN DUPLICADA — Alianzas con una URL aquí y otra en /personas/tarjetas-de-credito/",
+      "children": [
+        { "name": "claro", "tipo": "alianza", "nota": "Solo existe aquí, no en /personas/" },
+        { "name": "comprar-apple-sin-intereses", "tipo": "operativa", "nota": "⚠ No es una tarjeta — es una oferta puntual" },
+        { "name": "decathlon", "tipo": "alianza", "nota": "Solo existe aquí, no en /personas/" },
+        { "name": "mercado-libre", "tipo": "alianza", "nota": "Solo existe aquí, no en /personas/" },
+        { "name": "movistar-alianza", "tipo": "alianza", "nota": "⚠ DUPLICADO de /personas/tarjetas-de-credito/movistar" },
+        { "name": "tigo", "tipo": "alianza", "nota": "Solo existe aquí, no en /personas/" }
+      ]
+    },
+    {
+      "name": "/empresas/tarjetas-de-credito",
+      "tipo": "hub",
+      "nota": "10 tarjetas sin ningún contenido satelital (TyC, FAQ, instructivos, tasas)",
+      "children": [
+        { "name": "negocios", "tipo": "producto" },
+        { "name": "negocios-elite", "tipo": "producto" },
+        { "name": "corporativa", "tipo": "producto" },
+        { "name": "compras-institucionales", "tipo": "producto" },
+        { "name": "destinos", "tipo": "producto" },
+        { "name": "latam-business", "tipo": "alianza" },
+        { "name": "crecer", "tipo": "producto", "nota": "⚠ Mismo nombre que /empresas/tarjetas-debito/crecer — ambigüedad" },
+        { "name": "logros", "tipo": "producto", "nota": "⚠ Mismo nombre que /empresas/tarjetas-debito/logros — ambigüedad" },
+        { "name": "tarjeta-visa-distribucion", "tipo": "producto" }
+      ]
+    },
+    {
+      "name": "/empresas/tarjetas-debito",
+      "tipo": "hub",
+      "nota": "Separada de tarjetas de crédito — no hay hub unificador /empresas/tarjetas/",
+      "children": [
+        { "name": "negocios", "tipo": "producto" },
+        { "name": "afinidad", "tipo": "producto" },
+        { "name": "cedula-cafetera", "tipo": "producto" },
+        { "name": "crecer", "tipo": "producto", "nota": "⚠ Mismo nombre que TC crecer — sin diferenciación en URL" },
+        { "name": "logros", "tipo": "producto", "nota": "⚠ Mismo nombre que TC logros — sin diferenciación en URL" }
+      ]
+    },
+    {
+      "name": "/tyc — TyC dispersos (~48 entradas)",
+      "tipo": "disperso",
+      "nota": "⚠ Ningún TyC vive dentro del árbol de la tarjeta a la que aplica",
+      "children": [
+        {
+          "name": "Reglamento de producto",
+          "tipo": "grupo",
+          "children": [
+            { "name": "2025-reglamento-y-beneficios-tc-on", "tipo": "tyc", "nota": "TyC de ON — debería estar en /on/terminos-y-condiciones" }
+          ]
+        },
+        {
+          "name": "TyC de campañas (facturación)",
+          "tipo": "grupo",
+          "children": [
+            { "name": "2025-campana-tc-amor-y-amistad", "tipo": "tyc" },
+            { "name": "2025-halloween-tarjeta-de-credito", "tipo": "tyc" },
+            { "name": "2025-vacaciones-tarjeta-credito", "tipo": "tyc" },
+            { "name": "2025-golden-ticket", "tipo": "tyc" },
+            { "name": "2025-despega-con-tus-compras", "tipo": "tyc" },
+            { "name": "2026/retos-facturacion-tarjeta-credito", "tipo": "tyc" },
+            { "name": "2026/tarjeta-credito-on-al-natural", "tipo": "tyc" },
+            { "name": "2026/vive-tu-mundial-fifa-masivo", "tipo": "tyc" },
+            { "name": "2026/acepta-tu-tarjeta-credito-laminas-mundial", "tipo": "tyc" }
+          ]
+        },
+        {
+          "name": "TyC de avances",
+          "tipo": "grupo",
+          "children": [
+            { "name": "2025-tasas-especiales-avances", "tipo": "tyc" },
+            { "name": "2025-tasas-especiales-no-avanceros", "tipo": "tyc" },
+            { "name": "2025-tus-avances-premian-3.0", "tipo": "tyc" },
+            { "name": "2025-tus-avances-te-premian-noviembre", "tipo": "tyc" },
+            { "name": "2026/avance-sorprender-a-mama", "tipo": "tyc" }
+          ]
+        },
+        {
+          "name": "TyC de alianzas",
+          "tipo": "grupo",
+          "children": [
+            { "name": "2025-alianza-0-interes-claro", "tipo": "tyc" },
+            { "name": "2025-tigo-0-porciento-interes", "tipo": "tyc" },
+            { "name": "2025-usala-y-gana-latam-pass", "tipo": "tyc" },
+            { "name": "2025-usala-y-gana-latam-pass-mas-cuotas", "tipo": "tyc" },
+            { "name": "2025-alianza-despegar-tarjetazo", "tipo": "tyc" },
+            { "name": "2025-cross-border-tc-td-visa", "tipo": "tyc" }
+          ]
+        },
+        {
+          "name": "TyC de retención / gestión",
+          "tipo": "grupo",
+          "children": [
+            { "name": "2025-upgrade-tarjeta-de-credito", "tipo": "tyc" },
+            { "name": "2025-retencion-novacion", "tipo": "tyc" },
+            { "name": "2025-tarjeta-credito-cero-porciento-interes", "tipo": "tyc" },
+            { "name": "2025-tasa-especial-para-disminucion-cuota", "tipo": "tyc" },
+            { "name": "2026/cuota-comodin-post-desembolso", "tipo": "tyc" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "/atencion-al-cliente — FAQ e instructivos dispersos",
+      "tipo": "disperso",
+      "nota": "⚠ Contenido que debería vivir dentro de cada tarjeta",
+      "children": [
+        {
+          "name": "preguntas-frecuentes",
+          "tipo": "faq",
+          "children": [
+            { "name": "tarjetas-credito", "tipo": "faq", "nota": "FAQ genérica para todas las TC personas" },
+            { "name": "tarjeta-credito-empresas", "tipo": "faq", "nota": "FAQ genérica para todas las TC empresas" },
+            { "name": "medios-de-pago/pagos-con-tarjeta", "tipo": "faq" }
+          ]
+        },
+        {
+          "name": "instructivos",
+          "tipo": "instructivo",
+          "children": [
+            { "name": "activa-tus-tarjetas", "tipo": "instructivo", "nota": "Genérico para todas" },
+            { "name": "bloquear-tarjetas-por-perdida-robo", "tipo": "instructivo", "nota": "Genérico para todas" },
+            { "name": "cambio-fecha-pago-tarjeta-credito", "tipo": "instructivo" },
+            { "name": "congelar-tarjeta-facil-seguro", "tipo": "instructivo" },
+            { "name": "diferido-automatico-tarjeta-credito", "tipo": "instructivo" },
+            { "name": "refinanciar-deuda-tc", "tipo": "instructivo" }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "/tasas-y-tarifas — Tasas generales (no por producto)",
+      "tipo": "disperso",
+      "nota": "⚠ Una sola tabla por audiencia — sin desagregación por tarjeta",
+      "children": [
+        { "name": "tarifas-personas", "tipo": "tasas", "nota": "Incluye TC, cuentas y créditos mezclados" },
+        { "name": "tarifas-empresas", "tipo": "tasas", "nota": "Incluye TC y otros productos mezclados" }
+      ]
+    }
+  ]
+}

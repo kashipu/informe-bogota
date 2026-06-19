@@ -1,0 +1,68 @@
+---
+import '../styles/globals.css';
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = 'Reportes de arquitectura del sitio - Banco de Bogotá' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — Banco de Bogotá</title>
+  <meta name="description" content={description} />
+</head>
+<body>
+  <header class="bg-white/95 shadow-md sticky top-0 z-50">
+    <div class="px-8 py-3 flex items-center justify-between border-b border-gray-100">
+      <a href="/" class="text-xl font-bold text-gray-800 no-underline">📊 Banco de Bogotá — Arquitectura</a>
+      <slot name="header-actions" />
+    </div>
+    <nav class="px-8 py-2 flex items-center gap-1 text-sm">
+      <a href="/" class="px-3 py-1 rounded-md text-gray-600 hover:bg-gray-100 no-underline">🏠 Inicio</a>
+
+      <div class="dropdown">
+        <button class="nav-btn">📋 Datos <span class="chevron">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/insights">🔍 Insights</a>
+          <a href="/redirects">🔁 Redirecciones</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="nav-btn">🌐 Vistas <span class="chevron">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/grafico">🌳 Árbol</a>
+          <a href="/icicle">📊 Jerarquía</a>
+          <a href="/pack">⭕ Concentración</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="nav-btn">✨ Filtrado <span class="chevron">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/nowps">🏠 Dashboard</a>
+          <hr class="dropdown-sep" />
+          <a href="/nowps/grafico">🌳 Árbol</a>
+          <a href="/nowps/icicle">📊 Jerarquía</a>
+          <a href="/nowps/pack">⭕ Concentración</a>
+        </div>
+      </div>
+
+      <div class="dropdown">
+        <button class="nav-btn">🗺️ Exploración <span class="chevron">▾</span></button>
+        <div class="dropdown-menu">
+          <a href="/exploracion/canales-digitales">📡 Canales Digitales</a>
+          <a href="/exploracion/tarjetas/tc-actual">💳 Tarjetas — Actual</a>
+          <a href="/exploracion/tarjetas/tc-propuesta">💳 Tarjetas — Propuesta</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <main class="max-w-7xl mx-auto my-10 px-5 flex-1">
+    <slot />
+  </main>
+</body>
+</html>

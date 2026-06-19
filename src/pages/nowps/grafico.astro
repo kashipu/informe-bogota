@@ -1,0 +1,7 @@
+---
+import ChartLayout from '../../layouts/ChartLayout.astro';
+import GraphChart from '../../components/charts/GraphChart.astro';
+---
+<ChartLayout title="Vista de Árbol — Filtrado" activeChart="grafico" prefix="nowps/">
+  <GraphChart dataPath="/nowps/data/hierarchy.json" />
+</ChartLayout>

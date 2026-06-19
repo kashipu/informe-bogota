@@ -1,0 +1,7 @@
+---
+import ChartLayout from '../../layouts/ChartLayout.astro';
+import PackChart from '../../components/charts/PackChart.astro';
+---
+<ChartLayout title="Vista de Concentración — Filtrado" activeChart="pack" prefix="nowps/">
+  <PackChart dataPath="/nowps/data/hierarchy.json" />
+</ChartLayout>

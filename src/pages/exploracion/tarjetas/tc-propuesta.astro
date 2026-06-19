@@ -1,0 +1,145 @@
+---
+// D3 tree loaded from /exploracion/tarjetas/data/tc-propuesta.json
+---
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tarjetas de Crédito — Propuesta</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; margin: 0; background: #f5f5f5; overflow: hidden; }
+    .header { background: #1a3a2a; color: #fff; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; position: fixed; top: 0; left: 0; right: 0; z-index: 100; height: 52px; }
+    .header h1 { margin: 0; font-size: 15px; font-weight: 600; letter-spacing: 0.3px; }
+    .header .badge { background: #27ae60; color: #fff; font-size: 11px; padding: 3px 10px; border-radius: 20px; font-weight: 600; letter-spacing: 0.5px; }
+    .nav { display: flex; gap: 8px; align-items: center; }
+    .nav a { color: #ccc; text-decoration: none; font-size: 13px; padding: 5px 12px; border-radius: 5px; border: 1px solid #444; transition: all 0.2s; }
+    .nav a:hover { background: #333; color: #fff; }
+    .nav a.actual { background: #e74c3c; color: #fff; border-color: #e74c3c; }
+    .nav a.active { background: #27ae60; color: #fff; border-color: #27ae60; }
+    .controls { position: fixed; top: 60px; left: 16px; z-index: 50; display: flex; gap: 6px; flex-direction: column; }
+    .controls button { padding: 6px 12px; font-size: 12px; cursor: pointer; border: 1px solid #ccc; border-radius: 5px; background: #fff; color: #333; transition: all 0.15s; white-space: nowrap; }
+    .controls button:hover { background: #f0f0f0; }
+    .legend { position: fixed; top: 60px; right: 16px; z-index: 50; background: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 12px 14px; font-size: 11px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); min-width: 170px; }
+    .legend h3 { margin: 0 0 8px 0; font-size: 11px; color: #666; text-transform: uppercase; letter-spacing: 0.5px; }
+    .legend-item { display: flex; align-items: center; gap: 7px; margin-bottom: 5px; }
+    .legend-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+    .stats { position: fixed; bottom: 16px; right: 16px; z-index: 50; background: #1a3a2a; color: #fff; border-radius: 8px; padding: 10px 14px; font-size: 11px; }
+    .stats .stat { margin-bottom: 3px; }
+    .stats .stat strong { color: #4ade80; }
+    #chart { margin-top: 52px; }
+    .tooltip { position: fixed; background: rgba(20,40,25,0.95); color: #fff; padding: 10px 14px; border-radius: 8px; font-size: 12px; pointer-events: none; max-width: 280px; line-height: 1.5; z-index: 200; display: none; }
+    .tooltip strong { color: #4ade80; display: block; margin-bottom: 3px; }
+    .tooltip .tipo-badge { display: inline-block; font-size: 10px; padding: 1px 7px; border-radius: 10px; margin-bottom: 4px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.3px; }
+    .tooltip .nota { color: #86efac; font-size: 11px; margin-top: 4px; }
+    .node circle { stroke-width: 2px; }
+    .node text { font-size: 11px; fill: #333; }
+    .link { fill: none; stroke-width: 1.5px; stroke-opacity: 0.4; }
+  </style>
+</head>
+<body>
+<header class="header">
+  <h1>Tarjetas de Crédito — Propuesta &nbsp;<span class="badge">ECOSISTEMA</span></h1>
+  <nav class="nav">
+    <a href="/">← Inicio</a>
+    <a href="/exploracion/tarjetas/tc-actual" class="actual">Estado Actual</a>
+    <a href="/exploracion/tarjetas/tc-propuesta" class="active">Propuesta →</a>
+  </nav>
+</header>
+<div class="controls">
+  <button id="btn-expand">Expandir todo</button>
+  <button id="btn-collapse">Colapsar todo</button>
+  <button id="btn-reset">Centrar vista</button>
+  <button id="btn-l2">Solo nivel 2</button>
+</div>
+<div class="legend">
+  <h3>Tipos de nodo</h3>
+  <div class="legend-item"><div class="legend-dot" style="background:#1a3a2a"></div> Raíz / Hub</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#2980b9"></div> Producto (tarjeta)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#8e44ad"></div> Alianza cobranded</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#16a085"></div> Convenio</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#3498db"></div> Variante</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#27ae60"></div> Beneficios</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f39c12"></div> Tasas y tarifas</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#e74c3c"></div> TyC (dentro del producto)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#9b59b6"></div> FAQ (dentro del producto)</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#1abc9c"></div> Instructivo</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#e67e22"></div> Adquisición</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#c0392b"></div> Campaña (efímera)</div>
+</div>
+<div class="stats">
+  <div class="stat">Tarjetas propias: <strong>11</strong></div>
+  <div class="stat">Familias de alianza: <strong>7</strong></div>
+  <div class="stat">TyC en su producto: <strong>✓ todos</strong></div>
+  <div class="stat">FAQ por tarjeta: <strong>✓ todas</strong></div>
+  <div class="stat">Instructivos contextuales: <strong>✓ todos</strong></div>
+</div>
+<div id="chart"></div>
+<div class="tooltip" id="tooltip"></div>
+
+<script is:inline src="https://d3js.org/d3.v7.min.js"></script>
+<script is:inline>
+const COLORS = { root:'#1a3a2a', hub:'#2c3e50', grupo:'#7f8c8d', producto:'#2980b9', alianza:'#8e44ad', convenio:'#16a085', variante:'#3498db', beneficios:'#27ae60', beneficio:'#27ae60', tasas:'#f39c12', tyc:'#e74c3c', faq:'#9b59b6', instructivo:'#1abc9c', adquisicion:'#e67e22', gestion:'#2ecc71', operativa:'#7f8c8d', campana:'#c0392b' };
+const TIPO_LABELS = { root:'Raíz', hub:'Hub navegacional', grupo:'Agrupación editorial', producto:'Producto (tarjeta)', alianza:'Alianza cobranded', convenio:'Convenio institucional', variante:'Variante del producto', beneficios:'Beneficios y coberturas', beneficio:'Beneficio específico', tasas:'Tasas y tarifas (por producto)', tyc:'TyC dentro del producto ✓', faq:'FAQ dentro del producto ✓', instructivo:'Instructivo contextual ✓', adquisicion:'Cómo solicitarla', gestion:'Gestión post-venta', operativa:'Operativa general', campana:'Campaña temporal' };
+
+const width = window.innerWidth, height = window.innerHeight - 52;
+const tree = d3.tree().nodeSize([20, (width - 300) / 8]);
+const svg = d3.select('#chart').append('svg').attr('width', width).attr('height', height).style('user-select', 'none');
+const zoomG = svg.append('g');
+const zoom = d3.zoom().scaleExtent([0.1, 3]).on('zoom', e => zoomG.attr('transform', e.transform));
+svg.call(zoom);
+const gLink = zoomG.append('g').attr('fill', 'none');
+const gNode = zoomG.append('g').attr('cursor', 'pointer').attr('pointer-events', 'all');
+const tooltip = d3.select('#tooltip');
+
+d3.json('/exploracion/tarjetas/data/tc-propuesta.json').then(data => {
+  const root = d3.hierarchy(data);
+  root.x0 = height / 2; root.y0 = 0;
+  root.descendants().forEach((d, i) => { d.id = i; d._children = d.children; if (d.depth > 2) d.children = null; });
+
+  function getColor(d) { return COLORS[d.data.tipo] || '#95a5a6'; }
+
+  function update(source) {
+    tree(root);
+    const nodes = root.descendants().reverse(), links = root.links();
+    const transition = svg.transition().duration(300);
+    const node = gNode.selectAll('g').data(nodes, d => d.id);
+    const nodeEnter = node.enter().append('g').attr('class', 'node')
+      .attr('transform', d => `translate(${source.y0},${source.x0})`).attr('fill-opacity', 0).attr('stroke-opacity', 0)
+      .on('click', (event, d) => { d.children = d.children ? null : d._children; update(d); })
+      .on('mousemove', (event, d) => {
+        const tipo = TIPO_LABELS[d.data.tipo] || d.data.tipo || '—';
+        const nota = d.data.nota ? `<div class="nota">${d.data.nota}</div>` : '';
+        const hijos = d._children ? `<div style="color:#aaa;font-size:10px;margin-top:3px">${d._children.length} hijos</div>` : '';
+        tooltip.style('display', 'block').style('left', (event.clientX + 14) + 'px').style('top', (event.clientY - 10) + 'px')
+          .html(`<strong>${d.data.name}</strong><span class="tipo-badge" style="background:${getColor(d)}20;color:${getColor(d)};border:1px solid ${getColor(d)}40">${tipo}</span>${nota}${hijos}`);
+      })
+      .on('mouseleave', () => tooltip.style('display', 'none'));
+    nodeEnter.append('circle').attr('r', d => d.depth === 0 ? 7 : d.depth === 1 ? 6 : d._children ? 5 : 3.5).attr('fill', getColor).attr('stroke', getColor).attr('stroke-width', 2);
+    nodeEnter.append('text').attr('dy', '0.31em').attr('x', d => d._children ? -8 : 8).attr('text-anchor', d => d._children ? 'end' : 'start')
+      .style('font-size', d => d.depth === 0 ? '13px' : d.depth === 1 ? '12px' : '10px').style('font-weight', d => d.depth <= 1 ? '600' : '400')
+      .style('fill', getColor).text(d => d.data.name.length > 35 ? d.data.name.slice(0, 33) + '…' : d.data.name)
+      .clone(true).lower().attr('stroke-linejoin', 'round').attr('stroke-width', 3).attr('stroke', 'white');
+    node.merge(nodeEnter).transition(transition).attr('transform', d => `translate(${d.y},${d.x})`).attr('fill-opacity', 1).attr('stroke-opacity', 1);
+    node.exit().transition(transition).remove().attr('transform', d => `translate(${source.y},${source.x})`).attr('fill-opacity', 0).attr('stroke-opacity', 0);
+    const link = gLink.selectAll('path').data(links, d => d.target.id);
+    const linkEnter = link.enter().append('path').attr('fill', 'none').attr('stroke', d => getColor(d.target)).attr('stroke-width', 1.5).attr('stroke-opacity', 0.35)
+      .attr('d', d => { const o = {x: source.x0, y: source.y0}; return d3.linkHorizontal()({source: [o.y, o.x], target: [o.y, o.x]}); });
+    link.merge(linkEnter).transition(transition).attr('d', d => d3.linkHorizontal()({source: [d.source.y, d.source.x], target: [d.target.y, d.target.x]}));
+    link.exit().transition(transition).remove().attr('d', d => { const o = {x: source.x, y: source.y}; return d3.linkHorizontal()({source: [o.y, o.x], target: [o.y, o.x]}); });
+    root.eachBefore(d => { d.x0 = d.x; d.y0 = d.y; });
+  }
+
+  update(root);
+  const initialTransform = d3.zoomIdentity.translate(180, height / 2).scale(0.75);
+  svg.call(zoom.transform, initialTransform);
+  d3.select('#btn-expand').on('click', () => { root.descendants().forEach(d => { d.children = d._children; }); update(root); });
+  d3.select('#btn-collapse').on('click', () => { root.descendants().forEach(d => { if (d.depth > 0) d.children = null; }); update(root); });
+  d3.select('#btn-reset').on('click', () => { svg.transition().duration(400).call(zoom.transform, initialTransform); });
+  d3.select('#btn-l2').on('click', () => { root.descendants().forEach(d => { if (d.depth >= 2) d.children = null; else d.children = d._children; }); update(root); });
+  window.addEventListener('resize', () => location.reload());
+});
+</script>
+</body>
+</html>

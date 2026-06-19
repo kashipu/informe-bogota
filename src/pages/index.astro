@@ -1,0 +1,64 @@
+---
+import DashboardLayout from '../layouts/DashboardLayout.astro';
+import StatBox from '../components/ui/StatBox.astro';
+import ReportCard from '../components/ui/ReportCard.astro';
+import Section from '../components/ui/Section.astro';
+---
+<DashboardLayout title="Reportes de Arquitectura del Sitio">
+  <div class="max-w-6xl mx-auto py-10 px-5">
+
+    <Section title="📈 Análisis General del Sitio">
+      <div class="flex flex-wrap justify-around">
+        <StatBox number="4,246" label="URLs Totales" />
+        <StatBox number="97.8%" label="Tasa de Éxito (200 OK)" />
+        <StatBox number="91.8%" label="URLs con /wps" />
+      </div>
+      <p class="mt-5 p-4 bg-gray-50 rounded-lg text-sm text-gray-700">
+        <strong>💡 Insights SEO:</strong> El sitio presenta alta dependencia de WebSphere Portal (/wps) con 3,897 URLs (91.8%).
+        Solo 534 URLs (12.6%) representan contenido limpio sin paths técnicos, indicando oportunidad de optimización de estructura.
+        La eliminación de /wps mejoraría URLs amigables para SEO y experiencia de usuario.
+      </p>
+    </Section>
+
+    <Section title="📋 Datos accionables">
+      <p class="text-gray-500 mb-4">Tablas y dashboards interactivos con los datos generados por el crawler.</p>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5">
+        <ReportCard href="/redirects" title="🔁 Redirecciones /wps" description="Tabla origen → destino con filtros, tipo y status" />
+        <ReportCard href="/insights" title="🔍 Insights del sitio" description="SEO, performance, status codes, duplicados, secciones" />
+      </div>
+    </Section>
+
+    <Section title="🌐 Reportes Completos">
+      <p class="text-gray-500 mb-4">Visualizaciones con todos los datos del crawler, incluyendo todas las URLs descubiertas.</p>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5">
+        <ReportCard href="/grafico" title="🌳 Vista de Árbol" description="Estructura jerárquica navegable del sitio" />
+        <ReportCard href="/icicle" title="📊 Vista de Jerarquía" description="Visualización tipo icicle chart" />
+        <ReportCard href="/pack" title="⭕ Vista de Concentración" description="Circle packing con profundidad" />
+      </div>
+    </Section>
+
+    <Section title="🗺️ Exploración de Arquitectura">
+      <p class="text-gray-500 mb-4">Propuestas de reorganización de la arquitectura de información del sitio.</p>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5">
+        <ReportCard href="/exploracion/canales-digitales" title="📡 Canales Digitales" description="Árbol propuesto: personas, empresas, canales digitales / físicos / asistidos" />
+        <ReportCard href="/exploracion/tarjetas/tc-actual" title="💳 Tarjetas — Estado Actual" description="Árbol del estado actual de tarjetas de crédito" />
+        <ReportCard href="/exploracion/tarjetas/tc-propuesta" title="💳 Tarjetas — Propuesta" description="Arquitectura propuesta para tarjetas de crédito" />
+      </div>
+    </Section>
+
+    <Section title="✨ Reportes Filtrados">
+      <p class="text-gray-500 mb-2">Visualizaciones sin URLs de: /wps, /documents, /s, /s/minisitios</p>
+      <div class="flex flex-wrap justify-around mb-4">
+        <StatBox number="534" label="URLs Incluidas" />
+        <StatBox number="3,712" label="URLs Filtradas" />
+        <StatBox number="87.4%" label="Tasa de Filtrado" />
+      </div>
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-5">
+        <ReportCard href="/nowps/grafico" title="🌳 Vista de Árbol" description="Estructura filtrada del sitio" />
+        <ReportCard href="/nowps/icicle" title="📊 Vista de Jerarquía" description="Icicle chart filtrado" />
+        <ReportCard href="/nowps/pack" title="⭕ Vista de Concentración" description="Circle packing filtrado" />
+      </div>
+    </Section>
+
+  </div>
+</DashboardLayout>
